@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8E9AC996-5BBC-47D3-8310-DA681ED431F9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ferreteria.My.MyApplication</StartupObject>
+    <RootNamespace>ferreteria</RootNamespace>
+    <AssemblyName>ferreteria</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ferreteria.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ferreteria.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSet1.vb">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBitacora.Designer.vb">
+      <DependentUpon>FrmBitacora.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBitacora.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCategoria.Designer.vb">
+      <DependentUpon>FrmCategoria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCategoria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuCatalogos.Designer.vb">
+      <DependentUpon>FrmMenuCatalogos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenuCatalogos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaDevolucionesPersonal.Designer.vb">
+      <DependentUpon>FrmConsultaDevolucionesPersonal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaDevolucionesPersonal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaPerdidas.Designer.vb">
+      <DependentUpon>FrmConsultaPerdidas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaPerdidas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuConsultas.Designer.vb">
+      <DependentUpon>FrmMenuConsultas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenuConsultas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaVentaEmpleado.Designer.vb">
+      <DependentUpon>FrmConsultaVentaEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaVentaEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCompra.Designer.vb">
+      <DependentUpon>FrmCompra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCompra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaDevoluciones.Designer.vb">
+      <DependentUpon>FrmConsultaDevoluciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaDevoluciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaProveedor.Designer.vb">
+      <DependentUpon>FrmConsultaProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaVentaFecha.Designer.vb">
+      <DependentUpon>FrmConsultaVentaFecha.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaVentaFecha.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDevolucion.Designer.vb">
+      <DependentUpon>FrmDevolucion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDevolucion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuReportes.Designer.vb">
+      <DependentUpon>FrmMenuReportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenuReportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPerdidas.Designer.vb">
+      <DependentUpon>FrmPerdidas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPerdidas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPersonal.Designer.vb">
+      <DependentUpon>FrmPersonal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPersonal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProducto.Designer.vb">
+      <DependentUpon>FrmProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProveedor.Designer.vb">
+      <DependentUpon>FrmProveedor.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteComperi.Designer.vb">
+      <DependentUpon>FrmReporteComperi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReporteComperi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteComProv.Designer.vb">
+      <DependentUpon>FrmReporteComProv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReporteComProv.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteDevPer.Designer.vb">
+      <DependentUpon>FrmReporteDevPer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReporteDevPer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteDevPeri.Designer.vb">
+      <DependentUpon>FrmReporteDevPeri.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReporteDevPeri.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteExistencias.Designer.vb">
+      <DependentUpon>FrmReporteExistencias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReporteExistencias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportePerdidaPeri.Designer.vb">
+      <DependentUpon>FrmReportePerdidaPeri.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReportePerdidaPeri.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteVenPer.Designer.vb">
+      <DependentUpon>FrmReporteVenPer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReporteVenPer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteVenPeri.Designer.vb">
+      <DependentUpon>FrmReporteVenPeri.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReporteVenPeri.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRespaldo-Restaurar.Designer.vb">
+      <DependentUpon>FrmRespaldo-Restaurar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRespaldo-Restaurar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTraspaso.Designer.vb">
+      <DependentUpon>FrmTraspaso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTraspaso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVentas.Designer.vb">
+      <DependentUpon>FrmVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenu.Designer.vb">
+      <DependentUpon>FrmMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="frmReportes.Designer.vb">
+      <DependentUpon>frmReportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FrmBitacora.resx">
+      <DependentUpon>FrmBitacora.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCategoria.resx">
+      <DependentUpon>FrmCategoria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuCatalogos.resx">
+      <DependentUpon>FrmMenuCatalogos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCompra.resx">
+      <DependentUpon>FrmCompra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaDevoluciones.resx">
+      <DependentUpon>FrmConsultaDevoluciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaDevolucionesPersonal.resx">
+      <DependentUpon>FrmConsultaDevolucionesPersonal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaPerdidas.resx">
+      <DependentUpon>FrmConsultaPerdidas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaProveedor.resx">
+      <DependentUpon>FrmConsultaProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuConsultas.resx">
+      <DependentUpon>FrmMenuConsultas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaVentaEmpleado.resx">
+      <DependentUpon>FrmConsultaVentaEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaVentaFecha.resx">
+      <DependentUpon>FrmConsultaVentaFecha.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDevolucion.resx">
+      <DependentUpon>FrmDevolucion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuReportes.resx">
+      <DependentUpon>FrmMenuReportes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPerdidas.resx">
+      <DependentUpon>FrmPerdidas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPersonal.resx">
+      <DependentUpon>FrmPersonal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProducto.resx">
+      <DependentUpon>FrmProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProveedor.resx">
+      <DependentUpon>FrmProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteComperi.resx">
+      <DependentUpon>FrmReporteComperi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteComProv.resx">
+      <DependentUpon>FrmReporteComProv.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteDevPer.resx">
+      <DependentUpon>FrmReporteDevPer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteDevPeri.resx">
+      <DependentUpon>FrmReporteDevPeri.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteExistencias.resx">
+      <DependentUpon>FrmReporteExistencias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReportePerdidaPeri.resx">
+      <DependentUpon>FrmReportePerdidaPeri.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteVenPer.resx">
+      <DependentUpon>FrmReporteVenPer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteVenPeri.resx">
+      <DependentUpon>FrmReporteVenPeri.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRespaldo-Restaurar.resx">
+      <DependentUpon>FrmRespaldo-Restaurar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTraspaso.resx">
+      <DependentUpon>FrmTraspaso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVentas.resx">
+      <DependentUpon>FrmVentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenu.resx">
+      <DependentUpon>FrmMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte-compras-periodo.rdlc" />
+    <EmbeddedResource Include="Reporte-Compras-Proveedor.rdlc" />
+    <EmbeddedResource Include="frmReportes.resx">
+      <DependentUpon>frmReportes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte-devoluciones-periodo.rdlc" />
+    <EmbeddedResource Include="Reporte-devoluciones-personal.rdlc" />
+    <EmbeddedResource Include="Reporte-existencia-producto.rdlc" />
+    <EmbeddedResource Include="Reporte-perdida-periodo.rdlc" />
+    <EmbeddedResource Include="Reporte-ventas-periodo.rdlc" />
+    <EmbeddedResource Include="Reporte-ventas-personal.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fed11c516d402c77c569d4856e521056.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\catalogos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\devoluciones.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\perdidas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ventas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consultas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consultaCprov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consultaD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consultaVemp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consultaVfec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consultaDper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consultaDperiodo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consultaPerdPeri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consultaVperi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rcperi.png" />
+    <None Include="Resources\rcpro.png" />
+    <None Include="Resources\rdper.png" />
+    <None Include="Resources\rdperi.png" />
+    <None Include="Resources\rexiprodu.png" />
+    <None Include="Resources\rperdiperi.png" />
+    <None Include="Resources\rventasper.png" />
+    <None Include="Resources\rvperi.png" />
+    <None Include="Resources\categorias.png" />
+    <None Include="Resources\bitacora.png" />
+    <None Include="Resources\respaldo.png" />
+    <None Include="Resources\historicos.png" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
