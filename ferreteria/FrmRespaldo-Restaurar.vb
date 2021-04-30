@@ -6,6 +6,9 @@ Public Class FrmRespaldo_Restaurar
     Private Sub FrmRespaldo_Restaurar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexion.Open()
         comando = conexion.CreateCommand
+        If privilege.Equals("Normal") Then
+            btnAbrir.Enabled = False
+        End If
     End Sub
 
     Private Sub btnAbrir_Click(sender As Object, e As EventArgs) Handles btnAbrir.Click
@@ -17,11 +20,13 @@ Public Class FrmRespaldo_Restaurar
             If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
                 str_RutaArchivo = OpenFileDialog1.FileName
                 txtRuta1.Text = str_RutaArchivo
+                comando.CommandText = "DELETE DATABASE FERRETERIA"
+                comando.ExecuteNonQuery()
                 comando.CommandText = "RESTORE DATABASE FERRETERIA FROM DISK = '" & str_RutaArchivo & "' WITH Replace"
                 comando.ExecuteNonQuery()
             End If
             conexion.Close()
-            MsgBox("El respaldo fue un exito")
+            MsgBox("La restauración fue un exito")
         Catch
             MsgBox("A ocurrido un error con la restauracion")
         End Try
@@ -40,7 +45,7 @@ Public Class FrmRespaldo_Restaurar
                 comando.ExecuteNonQuery()
             End If
             conexion.Close()
-            MsgBox("La restauracion fue un exito")
+            MsgBox("El respaldo fue un exito")
         Catch
             MsgBox("A ocurrido un error con la restauracion")
         End Try

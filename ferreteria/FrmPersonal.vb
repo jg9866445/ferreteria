@@ -6,14 +6,13 @@ Public Class FrmPersonal
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
+        PersonalBindingSource.AddNew()
         btnSiguiente.Enabled = False
         btnInicio.Enabled = False
         btnAnterior.Enabled = False
         btnUltimo.Enabled = False
         btnModificar.Enabled = False
         btnNuevo.Enabled = False
-
-        txtIdPersonal.Enabled = True
         txtNombre.Enabled = True
         txtDireccion.Enabled = True
         txtCp.Enabled = True
@@ -23,7 +22,6 @@ Public Class FrmPersonal
         btnGrabar.Enabled = True
 
 
-        PersonalBindingSource.AddNew()
     End Sub
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click

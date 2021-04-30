@@ -92,6 +92,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Auxiliar.vb" />
     <Compile Include="DataSet1.vb">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
@@ -275,6 +276,24 @@
     <Compile Include="FrmMenu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="LogIn\LogIn.Designer.vb">
+      <DependentUpon>LogIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn\LogIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn\ProfileManagement.Designer.vb">
+      <DependentUpon>ProfileManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn\ProfileManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn\SignUp.Designer.vb">
+      <DependentUpon>SignUp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn\SignUp.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -385,6 +404,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn\LogIn.resx">
+      <DependentUpon>LogIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn\ProfileManagement.resx">
+      <DependentUpon>ProfileManagement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn\SignUp.resx">
+      <DependentUpon>SignUp.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

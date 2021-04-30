@@ -5,6 +5,7 @@ Public Class FrmCategoria
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
+        CategoriaBindingSource.AddNew()
         btnSiguiente.Enabled = False
         btnInicio.Enabled = False
         btnAnterior.Enabled = False
@@ -16,9 +17,7 @@ Public Class FrmCategoria
 
         txtNombreCategoria.Enabled = True
         txtDetalleCategoria.Enabled = True
-        txtidCategoria.Enabled = True
 
-        CategoriaBindingSource.AddNew()
     End Sub
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click

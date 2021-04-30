@@ -6,6 +6,7 @@ Public Class FrmProveedor
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
+        ProveedoresBindingSource.AddNew()
         btnSiguiente.Enabled = False
         btnInicio.Enabled = False
         btnAnterior.Enabled = False
@@ -13,7 +14,6 @@ Public Class FrmProveedor
         btnModificar.Enabled = False
         btnNuevo.Enabled = False
 
-        txtIdProveedor.Enabled = True
         txtNombre.Enabled = True
         txtDireecion.Enabled = True
         txtCP.Enabled = True
@@ -24,7 +24,6 @@ Public Class FrmProveedor
         btnGrabar.Enabled = True
 
 
-        ProveedoresBindingSource.AddNew()
 
     End Sub
 

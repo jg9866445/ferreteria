@@ -7,6 +7,7 @@ Public Class FrmProducto
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
+        ProductosBindingSource.AddNew()
         btnSiguiente.Enabled = False
         btnInicio.Enabled = False
         btnAnterior.Enabled = False
@@ -15,7 +16,6 @@ Public Class FrmProducto
         btnNuevo.Enabled = False
         cboCategoria.Enabled = True
 
-        txtIdProductos.Enabled = True
         txtNombre.Enabled = True
         txtDetalleP.Enabled = True
         txtPrecio.Enabled = True
@@ -24,7 +24,6 @@ Public Class FrmProducto
         txtMinimo.Enabled = True
         btnGrabar.Enabled = True
 
-        ProductosBindingSource.AddNew()
     End Sub
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click

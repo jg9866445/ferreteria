@@ -44,4 +44,31 @@
     Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
         FrmTraspaso.ShowDialog()
     End Sub
+
+    Private Sub AgregarUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarUsuarioNuevoToolStripMenuItem.Click
+        SignUp.ShowDialog()
+    End Sub
+    Private Sub AdministrarUsuarioActualToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdministrarUsuarioActualToolStripMenuItem.Click
+        ProfileManagement.ShowDialog()
+    End Sub
+
+    Private Sub CerrarSesionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarSesionToolStripMenuItem.Click
+        user = ""
+        pass = ""
+        privilege = ""
+        Close()
+    End Sub
+
+    Private Sub Frmmenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If privilege.Equals("Normal") Then
+            AgregarUsuarioNuevoToolStripMenuItem.Enabled = False
+            PictureBox4.Visible = False
+            PictureBox6.Visible = False
+        Else
+            AgregarUsuarioNuevoToolStripMenuItem.Enabled = True
+            PictureBox4.Visible = True
+            PictureBox6.Visible = True
+        End If
+        UsuarioToolStripMenuItem.Text = user
+    End Sub
 End Class
