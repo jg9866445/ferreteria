@@ -39,7 +39,6 @@ Public Class FrmVentas
         btnAgregar.Enabled = True
         btnGuardar.Enabled = True
         btnNuevo.Enabled = False
-        txtIdVenta.Enabled = True
 
         comando.CommandText = "Select count(*) From Ventas" 'SELECT TOP, SELECT BOTTOM 
         lector = comando.ExecuteReader
@@ -76,10 +75,11 @@ Public Class FrmVentas
         txtProducto.Text = lector(0)
         txtDetalleProducto.Text = lector(2)
         txtPrecio.Text = lector(4)
+        txtCantidad.Value = 0
+        txtCantidad.Maximum = lector(5)
         lector.Close()
         cboDescuento.Enabled = True
         txtCantidad.Enabled = True
-        txtEdoVenta.Enabled = True
     End Sub
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
@@ -98,7 +98,8 @@ Public Class FrmVentas
         txtdes.Text = txtdes.Text + descuento
         txtTotal.Text = txtTotal.Text + Total
 
-        dgvVenta.Rows.Add(txtProducto.Text, cboNombreProducto.Text, txtPrecio.Text, txtCantidad.Text, CDbl(txtPrecio.Text) * CDbl(txtCantidad.Text))
+        dgvVenta.Rows.Add(txtProducto.Text, cboNombreProducto.Text, txtPrecio.Text, txtCantidad.Text, CDbl(txtPrecio.Text) * CDbl(txtCantidad.Text), descuento)
+        btnAtrasRejilla.Enabled = True
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
@@ -181,6 +182,22 @@ Public Class FrmVentas
     Private Sub FrmVentas_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.F1 Then
             System.Diagnostics.Process.Start("D:\je_ss\Escritorio\tareas\SIS. INTEGRALES\ferreteria\ferreteria\Ayuda.chm")
+        End If
+    End Sub
+
+    Private Sub btnAtrasRejilla_Click(sender As Object, e As EventArgs) Handles btnAtrasRejilla.Click
+        Dim subtotal = txtSubtotal.Text - (CDbl(dgvVenta(2, dgvVenta.CurrentRow.Index - 1).Value) * CDbl(dgvVenta(3, dgvVenta.CurrentRow.Index - 1).Value))
+        Dim iva = subtotal * 0.16
+        Dim descuento As Single = Math.Round(CSng(txtdes.Text), 2) - Math.Round(CSng(dgvVenta(5, dgvVenta.CurrentRow.Index - 1).Value), 2)
+        Dim Total = (subtotal + iva) - descuento
+        dgvVenta.Rows.RemoveAt(dgvVenta.CurrentRow.Index - 1)
+        dgvVenta.Refresh()
+        txtSubtotal.Text = subtotal
+        txtIva.Text = iva
+        txtdes.Text = descuento
+        txtTotal.Text = Total
+        If dgvVenta.RowCount - 1 = 0 Then
+            btnAtrasRejilla.Enabled = False
         End If
     End Sub
 End Class

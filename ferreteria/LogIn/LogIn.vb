@@ -5,6 +5,15 @@ Public Class LogIn
     Dim comando As New SqlCommand 'Ejecuta comandos SQL
     Dim lector As SqlDataReader 'Para ejecutar Select y depositar en este contenedor los registros recuperados
     Private Sub btnLogIn_Click(sender As Object, e As EventArgs) Handles btnLogIn.Click
+        logInUser()
+    End Sub
+
+    Private Sub txtPass_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPass.KeyDown, txtUser.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            logInUser()
+        End If
+    End Sub
+    Private Sub logInUser()
         Dim n As Integer
         conexion.Open()
         comando = conexion.CreateCommand

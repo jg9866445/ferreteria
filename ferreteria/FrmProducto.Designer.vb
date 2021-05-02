@@ -92,19 +92,22 @@ Partial Class FrmProducto
         Me.GroupBox3.Controls.Add(Me.btnGrabar)
         Me.GroupBox3.Controls.Add(Me.btnSalir)
         Me.GroupBox3.Controls.Add(Me.btnNuevo)
-        Me.GroupBox3.Font = New System.Drawing.Font("Lucida Calligraphy", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox3.Location = New System.Drawing.Point(462, 510)
+        Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox3.Location = New System.Drawing.Point(346, 414)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(282, 115)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox3.Size = New System.Drawing.Size(212, 93)
         Me.GroupBox3.TabIndex = 41
         Me.GroupBox3.TabStop = False
         '
         'btnModificar
         '
-        Me.btnModificar.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.btnModificar.Location = New System.Drawing.Point(143, 27)
+        Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.btnModificar.Location = New System.Drawing.Point(107, 22)
+        Me.btnModificar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(114, 33)
+        Me.btnModificar.Size = New System.Drawing.Size(86, 27)
         Me.btnModificar.TabIndex = 37
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.UseVisualStyleBackColor = True
@@ -112,30 +115,33 @@ Partial Class FrmProducto
         'btnGrabar
         '
         Me.btnGrabar.Enabled = False
-        Me.btnGrabar.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.btnGrabar.Location = New System.Drawing.Point(17, 75)
+        Me.btnGrabar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.btnGrabar.Location = New System.Drawing.Point(13, 61)
+        Me.btnGrabar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnGrabar.Name = "btnGrabar"
-        Me.btnGrabar.Size = New System.Drawing.Size(114, 33)
+        Me.btnGrabar.Size = New System.Drawing.Size(86, 27)
         Me.btnGrabar.TabIndex = 36
         Me.btnGrabar.Text = "Grabar"
         Me.btnGrabar.UseVisualStyleBackColor = True
         '
         'btnSalir
         '
-        Me.btnSalir.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.btnSalir.Location = New System.Drawing.Point(143, 75)
+        Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.btnSalir.Location = New System.Drawing.Point(107, 61)
+        Me.btnSalir.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(114, 33)
+        Me.btnSalir.Size = New System.Drawing.Size(86, 27)
         Me.btnSalir.TabIndex = 35
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
         '
         'btnNuevo
         '
-        Me.btnNuevo.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.btnNuevo.Location = New System.Drawing.Point(17, 27)
+        Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.btnNuevo.Location = New System.Drawing.Point(13, 22)
+        Me.btnNuevo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(114, 33)
+        Me.btnNuevo.Size = New System.Drawing.Size(86, 27)
         Me.btnNuevo.TabIndex = 34
         Me.btnNuevo.Text = "Nuevo"
         Me.btnNuevo.UseVisualStyleBackColor = True
@@ -146,49 +152,55 @@ Partial Class FrmProducto
         Me.GroupBox2.Controls.Add(Me.btnAnterior)
         Me.GroupBox2.Controls.Add(Me.btnUltimo)
         Me.GroupBox2.Controls.Add(Me.btnInicio)
-        Me.GroupBox2.Font = New System.Drawing.Font("Lucida Calligraphy", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox2.Location = New System.Drawing.Point(134, 510)
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox2.Location = New System.Drawing.Point(100, 414)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(282, 118)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(212, 96)
         Me.GroupBox2.TabIndex = 40
         Me.GroupBox2.TabStop = False
         '
         'btnSiguiente
         '
-        Me.btnSiguiente.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.btnSiguiente.Location = New System.Drawing.Point(143, 27)
+        Me.btnSiguiente.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.btnSiguiente.Location = New System.Drawing.Point(107, 22)
+        Me.btnSiguiente.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnSiguiente.Name = "btnSiguiente"
-        Me.btnSiguiente.Size = New System.Drawing.Size(114, 33)
+        Me.btnSiguiente.Size = New System.Drawing.Size(86, 27)
         Me.btnSiguiente.TabIndex = 37
         Me.btnSiguiente.Text = "Siguiente"
         Me.btnSiguiente.UseVisualStyleBackColor = True
         '
         'btnAnterior
         '
-        Me.btnAnterior.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.btnAnterior.Location = New System.Drawing.Point(17, 75)
+        Me.btnAnterior.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.btnAnterior.Location = New System.Drawing.Point(13, 61)
+        Me.btnAnterior.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnAnterior.Name = "btnAnterior"
-        Me.btnAnterior.Size = New System.Drawing.Size(114, 33)
+        Me.btnAnterior.Size = New System.Drawing.Size(86, 27)
         Me.btnAnterior.TabIndex = 36
         Me.btnAnterior.Text = "Anterior"
         Me.btnAnterior.UseVisualStyleBackColor = True
         '
         'btnUltimo
         '
-        Me.btnUltimo.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.btnUltimo.Location = New System.Drawing.Point(143, 75)
+        Me.btnUltimo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.btnUltimo.Location = New System.Drawing.Point(107, 61)
+        Me.btnUltimo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnUltimo.Name = "btnUltimo"
-        Me.btnUltimo.Size = New System.Drawing.Size(114, 33)
+        Me.btnUltimo.Size = New System.Drawing.Size(86, 27)
         Me.btnUltimo.TabIndex = 35
         Me.btnUltimo.Text = "Ultimo" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.btnUltimo.UseVisualStyleBackColor = True
         '
         'btnInicio
         '
-        Me.btnInicio.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.btnInicio.Location = New System.Drawing.Point(17, 27)
+        Me.btnInicio.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.btnInicio.Location = New System.Drawing.Point(13, 22)
+        Me.btnInicio.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnInicio.Name = "btnInicio"
-        Me.btnInicio.Size = New System.Drawing.Size(114, 33)
+        Me.btnInicio.Size = New System.Drawing.Size(86, 27)
         Me.btnInicio.TabIndex = 34
         Me.btnInicio.Text = "Inicio" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.btnInicio.UseVisualStyleBackColor = True
@@ -200,12 +212,13 @@ Partial Class FrmProducto
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdProductoDataGridViewTextBoxColumn, Me.NombreProductoDataGridViewTextBoxColumn, Me.DetalleDataGridViewTextBoxColumn, Me.IdCategoriaDataGridViewTextBoxColumn, Me.PrecioDataGridViewTextBoxColumn, Me.CantidadDataGridViewTextBoxColumn, Me.MaximoDataGridViewTextBoxColumn, Me.MinimoDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.ProductosBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(25, 319)
+        Me.DataGridView1.Location = New System.Drawing.Point(19, 259)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(886, 176)
+        Me.DataGridView1.Size = New System.Drawing.Size(664, 143)
         Me.DataGridView1.TabIndex = 39
         '
         'IdProductoDataGridViewTextBoxColumn
@@ -300,10 +313,12 @@ Partial Class FrmProducto
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 131)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox1.Location = New System.Drawing.Point(9, 106)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(899, 163)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(674, 132)
         Me.GroupBox1.TabIndex = 38
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos de Producto"
@@ -316,9 +331,10 @@ Partial Class FrmProducto
         Me.cboCategoria.DisplayMember = "nombre"
         Me.cboCategoria.Enabled = False
         Me.cboCategoria.FormattingEnabled = True
-        Me.cboCategoria.Location = New System.Drawing.Point(732, 119)
+        Me.cboCategoria.Location = New System.Drawing.Point(549, 97)
+        Me.cboCategoria.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cboCategoria.Name = "cboCategoria"
-        Me.cboCategoria.Size = New System.Drawing.Size(137, 24)
+        Me.cboCategoria.Size = New System.Drawing.Size(104, 21)
         Me.cboCategoria.TabIndex = 35
         Me.cboCategoria.ValueMember = "idCategoria"
         '
@@ -330,10 +346,11 @@ Partial Class FrmProducto
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label6.Location = New System.Drawing.Point(636, 124)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.Label6.Location = New System.Drawing.Point(477, 101)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(90, 17)
+        Me.Label6.Size = New System.Drawing.Size(65, 13)
         Me.Label6.TabIndex = 34
         Me.Label6.Text = "Categoría:"
         '
@@ -342,9 +359,10 @@ Partial Class FrmProducto
         Me.txtMinimo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductosBindingSource, "minimo", True))
         Me.txtMinimo.Enabled = False
         Me.txtMinimo.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMinimo.Location = New System.Drawing.Point(514, 120)
+        Me.txtMinimo.Location = New System.Drawing.Point(386, 98)
+        Me.txtMinimo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtMinimo.Name = "txtMinimo"
-        Me.txtMinimo.Size = New System.Drawing.Size(105, 24)
+        Me.txtMinimo.Size = New System.Drawing.Size(80, 21)
         Me.txtMinimo.TabIndex = 33
         '
         'txtMaximo
@@ -352,9 +370,10 @@ Partial Class FrmProducto
         Me.txtMaximo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductosBindingSource, "maximo", True))
         Me.txtMaximo.Enabled = False
         Me.txtMaximo.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMaximo.Location = New System.Drawing.Point(304, 120)
+        Me.txtMaximo.Location = New System.Drawing.Point(228, 98)
+        Me.txtMaximo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtMaximo.Name = "txtMaximo"
-        Me.txtMaximo.Size = New System.Drawing.Size(112, 24)
+        Me.txtMaximo.Size = New System.Drawing.Size(85, 21)
         Me.txtMaximo.TabIndex = 32
         '
         'txtCantidad
@@ -362,9 +381,10 @@ Partial Class FrmProducto
         Me.txtCantidad.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductosBindingSource, "cantidad", True))
         Me.txtCantidad.Enabled = False
         Me.txtCantidad.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCantidad.Location = New System.Drawing.Point(102, 119)
+        Me.txtCantidad.Location = New System.Drawing.Point(76, 97)
+        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.Size = New System.Drawing.Size(103, 24)
+        Me.txtCantidad.Size = New System.Drawing.Size(78, 21)
         Me.txtCantidad.TabIndex = 31
         '
         'txtPrecio
@@ -372,9 +392,10 @@ Partial Class FrmProducto
         Me.txtPrecio.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductosBindingSource, "precio", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "C2"))
         Me.txtPrecio.Enabled = False
         Me.txtPrecio.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPrecio.Location = New System.Drawing.Point(606, 76)
+        Me.txtPrecio.Location = New System.Drawing.Point(454, 62)
+        Me.txtPrecio.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtPrecio.Name = "txtPrecio"
-        Me.txtPrecio.Size = New System.Drawing.Size(111, 24)
+        Me.txtPrecio.Size = New System.Drawing.Size(84, 21)
         Me.txtPrecio.TabIndex = 30
         '
         'txtDetalleP
@@ -382,9 +403,10 @@ Partial Class FrmProducto
         Me.txtDetalleP.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductosBindingSource, "detalle", True))
         Me.txtDetalleP.Enabled = False
         Me.txtDetalleP.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDetalleP.Location = New System.Drawing.Point(187, 76)
+        Me.txtDetalleP.Location = New System.Drawing.Point(140, 62)
+        Me.txtDetalleP.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtDetalleP.Name = "txtDetalleP"
-        Me.txtDetalleP.Size = New System.Drawing.Size(344, 24)
+        Me.txtDetalleP.Size = New System.Drawing.Size(259, 21)
         Me.txtDetalleP.TabIndex = 28
         '
         'txtNombre
@@ -392,9 +414,10 @@ Partial Class FrmProducto
         Me.txtNombre.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductosBindingSource, "nombreProducto", True))
         Me.txtNombre.Enabled = False
         Me.txtNombre.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombre.Location = New System.Drawing.Point(429, 38)
+        Me.txtNombre.Location = New System.Drawing.Point(322, 31)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(346, 24)
+        Me.txtNombre.Size = New System.Drawing.Size(260, 21)
         Me.txtNombre.TabIndex = 27
         '
         'txtIdProductos
@@ -402,78 +425,86 @@ Partial Class FrmProducto
         Me.txtIdProductos.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductosBindingSource, "idProducto", True))
         Me.txtIdProductos.Enabled = False
         Me.txtIdProductos.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtIdProductos.Location = New System.Drawing.Point(120, 37)
+        Me.txtIdProductos.Location = New System.Drawing.Point(90, 30)
+        Me.txtIdProductos.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtIdProductos.Name = "txtIdProductos"
-        Me.txtIdProductos.Size = New System.Drawing.Size(112, 24)
+        Me.txtIdProductos.Size = New System.Drawing.Size(85, 21)
         Me.txtIdProductos.TabIndex = 26
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label9.Location = New System.Drawing.Point(213, 123)
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.Label9.Location = New System.Drawing.Point(160, 100)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(85, 17)
+        Me.Label9.Size = New System.Drawing.Size(59, 13)
         Me.Label9.TabIndex = 25
         Me.Label9.Text = "Maximos:"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label8.Location = New System.Drawing.Point(430, 123)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.Label8.Location = New System.Drawing.Point(322, 100)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(81, 17)
+        Me.Label8.Size = New System.Drawing.Size(56, 13)
         Me.Label8.TabIndex = 24
         Me.Label8.Text = "Minimos:"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label7.Location = New System.Drawing.Point(13, 123)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.Label7.Location = New System.Drawing.Point(10, 100)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(86, 17)
+        Me.Label7.Size = New System.Drawing.Size(61, 13)
         Me.Label7.TabIndex = 23
         Me.Label7.Text = "Cantidad:"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label5.Location = New System.Drawing.Point(537, 80)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.Label5.Location = New System.Drawing.Point(403, 65)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(63, 17)
+        Me.Label5.Size = New System.Drawing.Size(46, 13)
         Me.Label5.TabIndex = 21
         Me.Label5.Text = "Precio:"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label4.Location = New System.Drawing.Point(13, 80)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.Label4.Location = New System.Drawing.Point(10, 65)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(169, 17)
+        Me.Label4.Size = New System.Drawing.Size(122, 13)
         Me.Label4.TabIndex = 20
         Me.Label4.Text = "Detalle de producto:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label3.Location = New System.Drawing.Point(250, 41)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Location = New System.Drawing.Point(188, 33)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(174, 17)
+        Me.Label3.Size = New System.Drawing.Size(124, 13)
         Me.Label3.TabIndex = 19
         Me.Label3.Text = "Nombre de producto:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label2.Location = New System.Drawing.Point(13, 41)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Location = New System.Drawing.Point(10, 33)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(102, 17)
+        Me.Label2.Size = New System.Drawing.Size(72, 13)
         Me.Label2.TabIndex = 18
         Me.Label2.Text = "IdProducto:"
         '
@@ -481,11 +512,12 @@ Partial Class FrmProducto
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(193, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(253, Byte), Integer))
-        Me.Label1.Font = New System.Drawing.Font("Lucida Calligraphy", 13.2!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.2!, System.Drawing.FontStyle.Bold)
         Me.Label1.Image = Global.ferreteria.My.Resources.Resources.fed11c516d402c77c569d4856e521056
-        Me.Label1.Location = New System.Drawing.Point(204, 53)
+        Me.Label1.Location = New System.Drawing.Point(153, 43)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(245, 28)
+        Me.Label1.Size = New System.Drawing.Size(176, 22)
         Me.Label1.TabIndex = 37
         Me.Label1.Text = "Catálogo Producto"
         '
@@ -493,9 +525,10 @@ Partial Class FrmProducto
         '
         Me.PictureBox3.BackgroundImage = Global.ferreteria.My.Resources.Resources.fed11c516d402c77c569d4856e521056
         Me.PictureBox3.Image = Global.ferreteria.My.Resources.Resources.LOGO
-        Me.PictureBox3.Location = New System.Drawing.Point(582, 15)
+        Me.PictureBox3.Location = New System.Drawing.Point(436, 12)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(329, 101)
+        Me.PictureBox3.Size = New System.Drawing.Size(247, 82)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 63
         Me.PictureBox3.TabStop = False
@@ -507,7 +540,7 @@ Partial Class FrmProducto
         '
         'SqlConnection1
         '
-        Me.SqlConnection1.ConnectionString = "Data Source=LAPTOP-LCROG2OD;Initial Catalog=FERRETERIA;Integrated Security=True"
+        Me.SqlConnection1.ConnectionString = "Data Source=.;Initial Catalog=FERRETERIA;Integrated Security=True"
         Me.SqlConnection1.FireInfoMessageEventOnUserErrors = False
         '
         'SqlInsertCommand1
@@ -570,10 +603,10 @@ Partial Class FrmProducto
         '
         'FrmProducto
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.ferreteria.My.Resources.Resources.fed11c516d402c77c569d4856e521056
-        Me.ClientSize = New System.Drawing.Size(923, 637)
+        Me.ClientSize = New System.Drawing.Size(692, 518)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
@@ -581,6 +614,7 @@ Partial Class FrmProducto
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.KeyPreview = True
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "FrmProducto"
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)

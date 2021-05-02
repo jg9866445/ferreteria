@@ -83,11 +83,12 @@ Partial Class FrmProveedor
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(193, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(253, Byte), Integer))
-        Me.Label1.Font = New System.Drawing.Font("Lucida Calligraphy", 13.2!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.2!, System.Drawing.FontStyle.Bold)
         Me.Label1.Image = Global.ferreteria.My.Resources.Resources.fed11c516d402c77c569d4856e521056
-        Me.Label1.Location = New System.Drawing.Point(162, 34)
+        Me.Label1.Location = New System.Drawing.Point(122, 28)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(261, 28)
+        Me.Label1.Size = New System.Drawing.Size(188, 22)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Catálogo Proveedor"
         '
@@ -110,10 +111,12 @@ Partial Class FrmProveedor
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox1.Location = New System.Drawing.Point(23, 105)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox1.Location = New System.Drawing.Point(17, 85)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(862, 173)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(646, 141)
         Me.GroupBox1.TabIndex = 18
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos de Proveedor"
@@ -122,9 +125,10 @@ Partial Class FrmProveedor
         '
         Me.txtRFC.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource, "rfc", True))
         Me.txtRFC.Enabled = False
-        Me.txtRFC.Location = New System.Drawing.Point(69, 120)
+        Me.txtRFC.Location = New System.Drawing.Point(52, 98)
+        Me.txtRFC.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtRFC.Name = "txtRFC"
-        Me.txtRFC.Size = New System.Drawing.Size(196, 25)
+        Me.txtRFC.Size = New System.Drawing.Size(148, 19)
         Me.txtRFC.TabIndex = 34
         '
         'ProveedoresBindingSource
@@ -141,18 +145,20 @@ Partial Class FrmProveedor
         '
         Me.txtCeluar.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource, "celular", True))
         Me.txtCeluar.Enabled = False
-        Me.txtCeluar.Location = New System.Drawing.Point(644, 120)
+        Me.txtCeluar.Location = New System.Drawing.Point(483, 98)
+        Me.txtCeluar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtCeluar.Name = "txtCeluar"
-        Me.txtCeluar.Size = New System.Drawing.Size(196, 25)
+        Me.txtCeluar.Size = New System.Drawing.Size(148, 19)
         Me.txtCeluar.TabIndex = 33
         '
         'txtTelefono
         '
         Me.txtTelefono.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource, "telefono", True))
         Me.txtTelefono.Enabled = False
-        Me.txtTelefono.Location = New System.Drawing.Point(371, 120)
+        Me.txtTelefono.Location = New System.Drawing.Point(278, 98)
+        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(172, 25)
+        Me.txtTelefono.Size = New System.Drawing.Size(130, 19)
         Me.txtTelefono.TabIndex = 32
         '
         'txtColonia
@@ -160,9 +166,10 @@ Partial Class FrmProveedor
         Me.txtColonia.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource, "colonia", True))
         Me.txtColonia.Enabled = False
         Me.txtColonia.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtColonia.Location = New System.Drawing.Point(672, 80)
+        Me.txtColonia.Location = New System.Drawing.Point(504, 65)
+        Me.txtColonia.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtColonia.Name = "txtColonia"
-        Me.txtColonia.Size = New System.Drawing.Size(168, 24)
+        Me.txtColonia.Size = New System.Drawing.Size(127, 21)
         Me.txtColonia.TabIndex = 30
         '
         'txtCP
@@ -170,9 +177,10 @@ Partial Class FrmProveedor
         Me.txtCP.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource, "cp", True))
         Me.txtCP.Enabled = False
         Me.txtCP.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCP.Location = New System.Drawing.Point(498, 80)
+        Me.txtCP.Location = New System.Drawing.Point(374, 65)
+        Me.txtCP.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtCP.Name = "txtCP"
-        Me.txtCP.Size = New System.Drawing.Size(89, 24)
+        Me.txtCP.Size = New System.Drawing.Size(68, 21)
         Me.txtCP.TabIndex = 29
         '
         'txtDireecion
@@ -180,9 +188,10 @@ Partial Class FrmProveedor
         Me.txtDireecion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource, "domicilio", True))
         Me.txtDireecion.Enabled = False
         Me.txtDireecion.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDireecion.Location = New System.Drawing.Point(109, 80)
+        Me.txtDireecion.Location = New System.Drawing.Point(82, 65)
+        Me.txtDireecion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtDireecion.Name = "txtDireecion"
-        Me.txtDireecion.Size = New System.Drawing.Size(328, 24)
+        Me.txtDireecion.Size = New System.Drawing.Size(247, 21)
         Me.txtDireecion.TabIndex = 28
         '
         'txtNombre
@@ -190,9 +199,10 @@ Partial Class FrmProveedor
         Me.txtNombre.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource, "nombre", True))
         Me.txtNombre.Enabled = False
         Me.txtNombre.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombre.Location = New System.Drawing.Point(442, 37)
+        Me.txtNombre.Location = New System.Drawing.Point(332, 30)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(398, 24)
+        Me.txtNombre.Size = New System.Drawing.Size(300, 21)
         Me.txtNombre.TabIndex = 27
         '
         'txtIdProveedor
@@ -200,88 +210,97 @@ Partial Class FrmProveedor
         Me.txtIdProveedor.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource, "idProveedor", True))
         Me.txtIdProveedor.Enabled = False
         Me.txtIdProveedor.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtIdProveedor.Location = New System.Drawing.Point(127, 37)
+        Me.txtIdProveedor.Location = New System.Drawing.Point(95, 30)
+        Me.txtIdProveedor.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtIdProveedor.Name = "txtIdProveedor"
-        Me.txtIdProveedor.Size = New System.Drawing.Size(112, 24)
+        Me.txtIdProveedor.Size = New System.Drawing.Size(85, 21)
         Me.txtIdProveedor.TabIndex = 26
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label9.Location = New System.Drawing.Point(287, 123)
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.Label9.Location = New System.Drawing.Point(215, 100)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(78, 17)
+        Me.Label9.Size = New System.Drawing.Size(59, 13)
         Me.Label9.TabIndex = 25
         Me.Label9.Text = "Teléfono:"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label8.Location = New System.Drawing.Point(559, 125)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.Label8.Location = New System.Drawing.Point(419, 102)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(69, 17)
+        Me.Label8.Size = New System.Drawing.Size(50, 13)
         Me.Label8.TabIndex = 24
         Me.Label8.Text = "Celular:"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label7.Location = New System.Drawing.Point(17, 126)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.Label7.Location = New System.Drawing.Point(13, 102)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(46, 17)
+        Me.Label7.Size = New System.Drawing.Size(34, 13)
         Me.Label7.TabIndex = 23
         Me.Label7.Text = "RFC:"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label6.Location = New System.Drawing.Point(446, 84)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.Label6.Location = New System.Drawing.Point(334, 68)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(49, 17)
+        Me.Label6.Size = New System.Drawing.Size(39, 13)
         Me.Label6.TabIndex = 22
         Me.Label6.Text = "C.P. :"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label5.Location = New System.Drawing.Point(596, 83)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.Label5.Location = New System.Drawing.Point(447, 67)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(72, 17)
+        Me.Label5.Size = New System.Drawing.Size(53, 13)
         Me.Label5.TabIndex = 21
         Me.Label5.Text = "Colonia:"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label4.Location = New System.Drawing.Point(15, 84)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.Label4.Location = New System.Drawing.Point(11, 68)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(90, 17)
+        Me.Label4.Size = New System.Drawing.Size(63, 13)
         Me.Label4.TabIndex = 20
         Me.Label4.Text = "Dirección:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label3.Location = New System.Drawing.Point(254, 40)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Location = New System.Drawing.Point(190, 32)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(183, 17)
+        Me.Label3.Size = New System.Drawing.Size(132, 13)
         Me.Label3.TabIndex = 19
         Me.Label3.Text = "Nombre de proveedor:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label2.Location = New System.Drawing.Point(13, 41)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Location = New System.Drawing.Point(10, 33)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(111, 17)
+        Me.Label2.Size = New System.Drawing.Size(80, 13)
         Me.Label2.TabIndex = 18
         Me.Label2.Text = "IdProveedor:"
         '
@@ -292,12 +311,13 @@ Partial Class FrmProveedor
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdProveedorDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.CelularDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.DomicilioDataGridViewTextBoxColumn, Me.CpDataGridViewTextBoxColumn, Me.ColoniaDataGridViewTextBoxColumn, Me.RfcDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.ProveedoresBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(23, 303)
+        Me.DataGridView1.Location = New System.Drawing.Point(17, 246)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(862, 176)
+        Me.DataGridView1.Size = New System.Drawing.Size(646, 143)
         Me.DataGridView1.TabIndex = 19
         '
         'IdProveedorDataGridViewTextBoxColumn
@@ -371,49 +391,55 @@ Partial Class FrmProveedor
         Me.GroupBox2.Controls.Add(Me.btnAnterior)
         Me.GroupBox2.Controls.Add(Me.btnUltimo)
         Me.GroupBox2.Controls.Add(Me.btnInicio)
-        Me.GroupBox2.Font = New System.Drawing.Font("Lucida Calligraphy", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox2.Location = New System.Drawing.Point(150, 497)
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox2.Location = New System.Drawing.Point(112, 404)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(282, 124)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(212, 101)
         Me.GroupBox2.TabIndex = 35
         Me.GroupBox2.TabStop = False
         '
         'btnSiguiente
         '
-        Me.btnSiguiente.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.btnSiguiente.Location = New System.Drawing.Point(143, 27)
+        Me.btnSiguiente.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.btnSiguiente.Location = New System.Drawing.Point(107, 22)
+        Me.btnSiguiente.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnSiguiente.Name = "btnSiguiente"
-        Me.btnSiguiente.Size = New System.Drawing.Size(114, 33)
+        Me.btnSiguiente.Size = New System.Drawing.Size(86, 27)
         Me.btnSiguiente.TabIndex = 37
         Me.btnSiguiente.Text = "Siguiente"
         Me.btnSiguiente.UseVisualStyleBackColor = True
         '
         'btnAnterior
         '
-        Me.btnAnterior.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.btnAnterior.Location = New System.Drawing.Point(17, 75)
+        Me.btnAnterior.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.btnAnterior.Location = New System.Drawing.Point(13, 61)
+        Me.btnAnterior.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnAnterior.Name = "btnAnterior"
-        Me.btnAnterior.Size = New System.Drawing.Size(114, 33)
+        Me.btnAnterior.Size = New System.Drawing.Size(86, 27)
         Me.btnAnterior.TabIndex = 36
         Me.btnAnterior.Text = "Anterior"
         Me.btnAnterior.UseVisualStyleBackColor = True
         '
         'btnUltimo
         '
-        Me.btnUltimo.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.btnUltimo.Location = New System.Drawing.Point(143, 75)
+        Me.btnUltimo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.btnUltimo.Location = New System.Drawing.Point(107, 61)
+        Me.btnUltimo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnUltimo.Name = "btnUltimo"
-        Me.btnUltimo.Size = New System.Drawing.Size(114, 33)
+        Me.btnUltimo.Size = New System.Drawing.Size(86, 27)
         Me.btnUltimo.TabIndex = 35
         Me.btnUltimo.Text = "Ultimo" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.btnUltimo.UseVisualStyleBackColor = True
         '
         'btnInicio
         '
-        Me.btnInicio.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.btnInicio.Location = New System.Drawing.Point(17, 27)
+        Me.btnInicio.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.btnInicio.Location = New System.Drawing.Point(13, 22)
+        Me.btnInicio.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnInicio.Name = "btnInicio"
-        Me.btnInicio.Size = New System.Drawing.Size(114, 33)
+        Me.btnInicio.Size = New System.Drawing.Size(86, 27)
         Me.btnInicio.TabIndex = 34
         Me.btnInicio.Text = "Inicio" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.btnInicio.UseVisualStyleBackColor = True
@@ -425,19 +451,22 @@ Partial Class FrmProveedor
         Me.GroupBox3.Controls.Add(Me.btnGrabar)
         Me.GroupBox3.Controls.Add(Me.btnSalir)
         Me.GroupBox3.Controls.Add(Me.btnNuevo)
-        Me.GroupBox3.Font = New System.Drawing.Font("Lucida Calligraphy", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox3.Location = New System.Drawing.Point(472, 493)
+        Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox3.Location = New System.Drawing.Point(354, 401)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(282, 128)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox3.Size = New System.Drawing.Size(212, 104)
         Me.GroupBox3.TabIndex = 36
         Me.GroupBox3.TabStop = False
         '
         'btnModificar
         '
-        Me.btnModificar.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.btnModificar.Location = New System.Drawing.Point(143, 27)
+        Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.btnModificar.Location = New System.Drawing.Point(107, 22)
+        Me.btnModificar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(114, 33)
+        Me.btnModificar.Size = New System.Drawing.Size(86, 27)
         Me.btnModificar.TabIndex = 37
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.UseVisualStyleBackColor = True
@@ -445,30 +474,33 @@ Partial Class FrmProveedor
         'btnGrabar
         '
         Me.btnGrabar.Enabled = False
-        Me.btnGrabar.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.btnGrabar.Location = New System.Drawing.Point(17, 75)
+        Me.btnGrabar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.btnGrabar.Location = New System.Drawing.Point(13, 61)
+        Me.btnGrabar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnGrabar.Name = "btnGrabar"
-        Me.btnGrabar.Size = New System.Drawing.Size(114, 33)
+        Me.btnGrabar.Size = New System.Drawing.Size(86, 27)
         Me.btnGrabar.TabIndex = 36
         Me.btnGrabar.Text = "Grabar"
         Me.btnGrabar.UseVisualStyleBackColor = True
         '
         'btnSalir
         '
-        Me.btnSalir.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.btnSalir.Location = New System.Drawing.Point(143, 75)
+        Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.btnSalir.Location = New System.Drawing.Point(107, 61)
+        Me.btnSalir.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(114, 33)
+        Me.btnSalir.Size = New System.Drawing.Size(86, 27)
         Me.btnSalir.TabIndex = 35
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
         '
         'btnNuevo
         '
-        Me.btnNuevo.Font = New System.Drawing.Font("Lucida Calligraphy", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.btnNuevo.Location = New System.Drawing.Point(17, 27)
+        Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.btnNuevo.Location = New System.Drawing.Point(13, 22)
+        Me.btnNuevo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(114, 33)
+        Me.btnNuevo.Size = New System.Drawing.Size(86, 27)
         Me.btnNuevo.TabIndex = 34
         Me.btnNuevo.Text = "Nuevo"
         Me.btnNuevo.UseVisualStyleBackColor = True
@@ -481,7 +513,7 @@ Partial Class FrmProveedor
         '
         'SqlConnection1
         '
-        Me.SqlConnection1.ConnectionString = "Data Source=LAPTOP-LCROG2OD;Initial Catalog=FERRETERIA;Integrated Security=True"
+        Me.SqlConnection1.ConnectionString = "Data Source=.;Initial Catalog=FERRETERIA;Integrated Security=True"
         Me.SqlConnection1.FireInfoMessageEventOnUserErrors = False
         '
         'SqlInsertCommand1
@@ -514,19 +546,20 @@ Partial Class FrmProveedor
         '
         Me.PictureBox3.BackgroundImage = Global.ferreteria.My.Resources.Resources.fed11c516d402c77c569d4856e521056
         Me.PictureBox3.Image = Global.ferreteria.My.Resources.Resources.LOGO
-        Me.PictureBox3.Location = New System.Drawing.Point(556, 12)
+        Me.PictureBox3.Location = New System.Drawing.Point(417, 10)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(329, 79)
+        Me.PictureBox3.Size = New System.Drawing.Size(247, 64)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 63
         Me.PictureBox3.TabStop = False
         '
         'FrmProveedor
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.ferreteria.My.Resources.Resources.fed11c516d402c77c569d4856e521056
-        Me.ClientSize = New System.Drawing.Size(920, 639)
+        Me.ClientSize = New System.Drawing.Size(690, 519)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
@@ -534,6 +567,7 @@ Partial Class FrmProveedor
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.KeyPreview = True
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "FrmProveedor"
         Me.Text = "Proveedores"
         Me.GroupBox1.ResumeLayout(False)

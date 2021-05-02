@@ -60,6 +60,7 @@
     End Sub
 
     Private Sub Frmmenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Label1.Text = DateString
         If privilege.Equals("Normal") Then
             AgregarUsuarioNuevoToolStripMenuItem.Enabled = False
             PictureBox4.Visible = False

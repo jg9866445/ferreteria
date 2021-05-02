@@ -40,6 +40,8 @@ Partial Class Frmmenu
         Me.AgregarUsuarioNuevoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AdministrarUsuarioActualToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarSesionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.pbPerdidas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbDevoluciones, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbCompras, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,6 +55,7 @@ Partial Class Frmmenu
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pbPerdidas
@@ -189,6 +192,8 @@ Partial Class Frmmenu
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.PictureBox7)
         Me.Panel1.Controls.Add(Me.MenuStrip1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -233,6 +238,31 @@ Partial Class Frmmenu
         Me.CerrarSesionToolStripMenuItem.Size = New System.Drawing.Size(216, 22)
         Me.CerrarSesionToolStripMenuItem.Text = "Cerrar Sesion"
         '
+        'PictureBox7
+        '
+        Me.PictureBox7.BackgroundImage = Global.ferreteria.My.Resources.Resources.fed11c516d402c77c569d4856e521056
+        Me.PictureBox7.Image = Global.ferreteria.My.Resources.Resources.LOGO
+        Me.PictureBox7.Location = New System.Drawing.Point(2, 1)
+        Me.PictureBox7.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(79, 38)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox7.TabIndex = 13
+        Me.PictureBox7.TabStop = False
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(312, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(63, 20)
+        Me.Label1.TabIndex = 14
+        Me.Label1.Text = "Label1"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Frmmenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -272,6 +302,7 @@ Partial Class Frmmenu
         Me.Panel1.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -292,4 +323,6 @@ Partial Class Frmmenu
     Friend WithEvents AgregarUsuarioNuevoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AdministrarUsuarioActualToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CerrarSesionToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents Label1 As Label
 End Class

@@ -1,12 +1,25 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class FrmPersonal
+    Dim conexion As New SqlConnection("Data Source=.;Initial catalog=FERRETERIA; Integrated security=true")
+    Dim comando As New SqlCommand 'Ejecuta comandos SQL
+    Dim lector As SqlDataReader 'Para ejecutar Select y depositar en este contenedor los registros recuperados
     Private Sub FrmPersonal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SqlDataAdapter1.Fill(DataSet11.personal)
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         PersonalBindingSource.AddNew()
+        conexion.Open()
+        comando = conexion.CreateCommand
+        comando.CommandText = "SELECT TOP 1 idPersonal FROM personal ORDER BY idPersonal DESC"
+        lector = comando.ExecuteReader
+        lector.Read()
+        Dim n As Integer = lector(0) + 1 'OBTENGO ULTIMA ID Y LA INCREMENTO
+        ' SI LA ULTIMA FUE ID = 5, SERA 5+1 = 6
+        txtIdPersonal.Text = n
+        lector.Close()
+        conexion.Close()
         btnSiguiente.Enabled = False
         btnInicio.Enabled = False
         btnAnterior.Enabled = False
@@ -68,7 +81,21 @@ Public Class FrmPersonal
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
-        Me.Dispose()
+        PersonalBindingSource.CancelEdit()
+        btnSiguiente.Enabled = True
+        btnInicio.Enabled = True
+        btnAnterior.Enabled = True
+        btnUltimo.Enabled = True
+        btnModificar.Enabled = True
+        btnNuevo.Enabled = True
+        txtNombre.Enabled = False
+        txtDireccion.Enabled = False
+        txtCp.Enabled = False
+        txtColonia.Enabled = False
+        txtTelefono.Enabled = False
+        txtCelular.Enabled = False
+        btnGrabar.Enabled = False
+        Close()
     End Sub
 
     Private Sub btnInicio_Click(sender As Object, e As EventArgs) Handles btnInicio.Click
