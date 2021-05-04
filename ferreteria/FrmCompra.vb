@@ -1,8 +1,8 @@
-﻿Imports System.ComponentModel
+Imports System.Configuration
 Imports System.Data.SqlClient
 Public Class FrmCompra
 
-    Dim conexion As New SqlConnection("Data Source=.;Initial catalog=FERRETERIA; Integrated security=true")
+    Dim conexion As New SqlConnection(ConfigurationManager.ConnectionStrings("ferreteria.My.MySettings.FERRETERIAConnectionString").ConnectionString)
     Dim comando As New SqlCommand 'Ejecuta comandos SQL
     Dim lector As SqlDataReader 'Para ejecutar Select y depositar en este contenedor los registros recuperados
     Dim transaction As SqlTransaction

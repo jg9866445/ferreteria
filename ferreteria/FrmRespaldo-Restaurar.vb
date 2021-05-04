@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class FrmRespaldo_Restaurar
-    Dim conexion As New SqlConnection("Data Source=.;Initial catalog=master; Integrated security=Yes")
+    Dim conexion = New SqlConnection(ConfigurationManager.ConnectionStrings("ferreteria.My.MySettings.FERRETERIAConnectionString").ConnectionString)
     Dim comando As New SqlCommand 'Ejecuta comandos SQL
     Private Sub FrmRespaldo_Restaurar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexion.Open()

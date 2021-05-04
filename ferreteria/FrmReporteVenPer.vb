@@ -1,8 +1,8 @@
-﻿Imports System.Data.SqlClient
+Imports System.Data.SqlClient
 Imports Microsoft.Reporting.WinForms
 Imports System.Configuration
 Public Class FrmReporteVenPer
-    Dim conexion As New SqlConnection("Data Source=.;Initial catalog=FERRETERIA; Integrated security=true")
+    Dim conexion = New SqlConnection(ConfigurationManager.ConnectionStrings("ferreteria.My.MySettings.FERRETERIAConnectionString").ConnectionString)
     Dim comando As New SqlCommand 'Ejecuta comandos SQL
     Dim lector As SqlDataReader 'Para ejecutar Select y depositar en este contenedor los registros recuperados
 

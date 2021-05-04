@@ -1,8 +1,8 @@
-﻿Imports System.Data.SqlClient
+Imports System.Data.SqlClient
 Imports Microsoft.Reporting.WinForms
 Imports System.Configuration
 Public Class FrmReporteExistencias
-    Dim conexion As New SqlConnection("Data Source=.;Initial catalog=FERRETERIA; Integrated security=true")
+    Dim conexion As New SqlConnection(ConfigurationManager.ConnectionStrings("ferreteria.My.MySettings.FERRETERIAConnectionString").ConnectionString)
     Dim comando As New SqlCommand 'Ejecuta comandos SQL
     Dim lector As SqlDataReader 'Para ejecutar Select y depositar en este contenedor los registros recuperados
     Private Sub FrmReporteExistencias_Load(sender As Object, e As EventArgs) Handles MyBase.Load

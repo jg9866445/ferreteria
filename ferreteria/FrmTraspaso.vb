@@ -1,6 +1,7 @@
-﻿Imports System.Data.SqlClient
+﻿Imports System.Configuration
+Imports System.Data.SqlClient
 Public Class FrmTraspaso
-    Dim conexion As New SqlConnection("Data Source=.;Initial catalog=FERRETERIA; Integrated security=true; MultipleActiveResultSets=True")
+    Dim conexion = New SqlConnection(ConfigurationManager.ConnectionStrings("ferreteria.My.MySettings.FERRETERIAConnectionString").ConnectionString)
     Dim conexion2 As New SqlConnection("Data Source=.;Initial catalog=HISTORICOS; Integrated security=true; MultipleActiveResultSets=True")
     Dim comando1, comando2, comando3 As New SqlCommand 'Ejecuta comandos SQL
     Dim lector, lector2 As SqlDataReader 'Para ejecutar Select y depositar en este contenedor los registros recuperados

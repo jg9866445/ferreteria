@@ -12,7 +12,7 @@ Public Class FrmReporteDevPeri
         f1 = dtpFi.Text
         f2 = dtpFf.Text
 
-        Dim conexion = New SqlConnection(ConfigurationManager.ConnectionStrings("ferreteria.My.MySettings.FERRETERIAConnectionString").ConnectionString)
+        Dim conexion As New SqlConnection(ConfigurationManager.ConnectionStrings("ferreteria.My.MySettings.FERRETERIAConnectionString").ConnectionString)
 
         conexion.Open()
         Dim Adaptador As New SqlDataAdapter
