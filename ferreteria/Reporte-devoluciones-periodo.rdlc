@@ -737,11 +737,22 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Chart Name="Chart1">
+          <Line Name="Line1">
+            <Top>0.17639cm</Top>
+            <Height>0cm</Height>
+            <Width>18.56317cm</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Chart Name="Chart2">
             <ChartCategoryHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Group Name="Chart1_CategoryGroup">
+                  <Group Name="Chart2_CategoryGroup">
                     <GroupExpressions>
                       <GroupExpression>=Fields!nombre.Value</GroupExpression>
                     </GroupExpressions>
@@ -780,7 +791,6 @@
                       <DataElementOutput>Output</DataElementOutput>
                     </ChartDataPoint>
                   </ChartDataPoints>
-                  <Type>Shape</Type>
                   <Style />
                   <ChartEmptyPoints>
                     <Style />
@@ -1038,6 +1048,7 @@
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>8pt</FontSize>
                 </Style>
+                <Position>TopLeft</Position>
                 <ChartLegendTitle>
                   <Caption />
                   <Style>
@@ -1052,7 +1063,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Devoluciones por periodo</Caption>
+                <Caption>Título del gráfico</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>9pt</FontSize>
@@ -1083,10 +1094,10 @@
             </ChartNoDataMessage>
             <DataSetName>DataSet1</DataSetName>
             <Top>3.76033cm</Top>
-            <Left>4.71192cm</Left>
+            <Left>4.74719cm</Left>
             <Height>5cm</Height>
             <Width>7.5cm</Width>
-            <ZIndex>6</ZIndex>
+            <ZIndex>7</ZIndex>
             <Style>
               <Border>
                 <Color>LightGrey</Color>
@@ -1096,19 +1107,8 @@
               <BackgroundGradientType>None</BackgroundGradientType>
             </Style>
           </Chart>
-          <Line Name="Line1">
-            <Top>0.17639cm</Top>
-            <Height>0cm</Height>
-            <Width>18.56317cm</Width>
-            <ZIndex>7</ZIndex>
-            <Style>
-              <Border>
-                <Style>Solid</Style>
-              </Border>
-            </Style>
-          </Line>
         </ReportItems>
-        <Height>3.73228in</Height>
+        <Height>4.35728in</Height>
         <Style>
           <Border>
             <Style>None</Style>

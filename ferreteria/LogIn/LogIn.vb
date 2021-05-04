@@ -1,7 +1,10 @@
-﻿Imports System.Data.SqlClient
+﻿Imports System.Configuration
+Imports System.Data.SqlClient
 Public Class LogIn
 
-    Dim conexion As New SqlConnection("Data Source=.;Initial catalog=FERRETERIA; Integrated security=true")
+    Dim conexion As New SqlConnection(ConfigurationManager.ConnectionStrings.ToString)
+
+    'Dim conexion As New SqlConnection("Data Source=.;Initial catalog=FERRETERIA; Integrated security=true")
     Dim comando As New SqlCommand 'Ejecuta comandos SQL
     Dim lector As SqlDataReader 'Para ejecutar Select y depositar en este contenedor los registros recuperados
     Private Sub btnLogIn_Click(sender As Object, e As EventArgs) Handles btnLogIn.Click

@@ -35,10 +35,10 @@ Partial Class LogIn
         '
         Me.PictureBox3.BackgroundImage = Global.ferreteria.My.Resources.Resources.fed11c516d402c77c569d4856e521056
         Me.PictureBox3.Image = Global.ferreteria.My.Resources.Resources.LOGO
-        Me.PictureBox3.Location = New System.Drawing.Point(117, 11)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox3.Location = New System.Drawing.Point(156, 14)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(156, 86)
+        Me.PictureBox3.Size = New System.Drawing.Size(208, 106)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 13
         Me.PictureBox3.TabStop = False
@@ -46,31 +46,30 @@ Partial Class LogIn
         'txtUser
         '
         Me.txtUser.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUser.Location = New System.Drawing.Point(152, 113)
-        Me.txtUser.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtUser.Location = New System.Drawing.Point(203, 139)
+        Me.txtUser.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtUser.MaxLength = 16
         Me.txtUser.Name = "txtUser"
-        Me.txtUser.Size = New System.Drawing.Size(144, 21)
+        Me.txtUser.Size = New System.Drawing.Size(191, 24)
         Me.txtUser.TabIndex = 1
         '
         'txtPass
         '
         Me.txtPass.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPass.Location = New System.Drawing.Point(152, 148)
-        Me.txtPass.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtPass.Location = New System.Drawing.Point(203, 182)
+        Me.txtPass.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtPass.Name = "txtPass"
         Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPass.Size = New System.Drawing.Size(144, 21)
+        Me.txtPass.Size = New System.Drawing.Size(191, 24)
         Me.txtPass.TabIndex = 2
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label9.Location = New System.Drawing.Point(73, 151)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label9.Location = New System.Drawing.Point(97, 186)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(75, 13)
+        Me.Label9.Size = New System.Drawing.Size(91, 16)
         Me.Label9.TabIndex = 35
         Me.Label9.Text = "Contraseña:"
         '
@@ -78,34 +77,35 @@ Partial Class LogIn
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label8.Location = New System.Drawing.Point(95, 116)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label8.Location = New System.Drawing.Point(127, 143)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(53, 13)
+        Me.Label8.Size = New System.Drawing.Size(66, 16)
         Me.Label8.TabIndex = 34
         Me.Label8.Text = "Usuario:"
         '
         'btnLogIn
         '
-        Me.btnLogIn.Location = New System.Drawing.Point(221, 188)
+        Me.btnLogIn.Location = New System.Drawing.Point(295, 231)
+        Me.btnLogIn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnLogIn.Name = "btnLogIn"
-        Me.btnLogIn.Size = New System.Drawing.Size(75, 23)
+        Me.btnLogIn.Size = New System.Drawing.Size(100, 28)
         Me.btnLogIn.TabIndex = 3
         Me.btnLogIn.Text = "Ingresar"
         Me.btnLogIn.UseVisualStyleBackColor = True
         '
         'LogIn
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.ferreteria.My.Resources.Resources.fed11c516d402c77c569d4856e521056
-        Me.ClientSize = New System.Drawing.Size(391, 234)
+        Me.ClientSize = New System.Drawing.Size(521, 288)
         Me.Controls.Add(Me.btnLogIn)
         Me.Controls.Add(Me.txtUser)
         Me.Controls.Add(Me.txtPass)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.PictureBox3)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "LogIn"
         Me.Text = "LogIn"
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
