@@ -1,4 +1,4 @@
-Imports System.Data.SqlClient
+﻿Imports System.Data.SqlClient
 Imports Microsoft.Reporting.WinForms
 Imports System.Configuration
 Public Class FrmReporteExistencias
@@ -53,5 +53,6 @@ Public Class FrmReporteExistencias
         frmReportes.ReportViewer1.RefreshReport()
         frmReportes.Show()
         conexion.Close()
+        conexion2.Close()
     End Sub
 End Class

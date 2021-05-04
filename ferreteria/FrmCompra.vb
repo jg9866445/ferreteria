@@ -1,4 +1,4 @@
-Imports System.Configuration
+﻿Imports System.Configuration
 Imports System.Data.SqlClient
 Public Class FrmCompra
 
@@ -179,6 +179,7 @@ Public Class FrmCompra
     End Sub
 
     Private Sub FrmCompra_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        dgwCompra.Rows.Clear()
         conexion.Close()
     End Sub
 

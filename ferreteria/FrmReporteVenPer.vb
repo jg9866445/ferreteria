@@ -1,4 +1,4 @@
-Imports System.Data.SqlClient
+﻿Imports System.Data.SqlClient
 Imports Microsoft.Reporting.WinForms
 Imports System.Configuration
 Public Class FrmReporteVenPer
@@ -54,5 +54,6 @@ Public Class FrmReporteVenPer
         frmReportes.ReportViewer1.RefreshReport()
         frmReportes.Show()
         conexion.Close()
+        conexion2.Close()
     End Sub
 End Class

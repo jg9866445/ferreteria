@@ -1,4 +1,4 @@
-Imports System.Configuration
+﻿Imports System.Configuration
 Imports System.Data.SqlClient
 Public Class FrmDevolucion
     Dim conexion As New SqlConnection(ConfigurationManager.ConnectionStrings("ferreteria.My.MySettings.FERRETERIAConnectionString").ConnectionString)
@@ -140,6 +140,7 @@ Public Class FrmDevolucion
     End Sub
 
     Private Sub FrmDevolucion_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        dgvDevolucion.Rows.Clear()
         conexion.Close()
     End Sub
 

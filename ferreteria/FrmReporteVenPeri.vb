@@ -50,5 +50,6 @@ Public Class FrmReporteVenPeri
         frmReportes.ReportViewer1.RefreshReport()
         frmReportes.Show()
         conexion.Close()
+
     End Sub
 End Class

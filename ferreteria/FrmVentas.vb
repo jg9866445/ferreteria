@@ -1,4 +1,4 @@
-Imports System.Configuration
+﻿Imports System.Configuration
 Imports System.Data.SqlClient
 Public Class FrmVentas
     Dim conexion = New SqlConnection(ConfigurationManager.ConnectionStrings("ferreteria.My.MySettings.FERRETERIAConnectionString").ConnectionString)
@@ -176,6 +176,7 @@ Public Class FrmVentas
     End Sub
 
     Private Sub FrmVentas_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        dgvVenta.Rows.Clear()
         conexion.Close()
     End Sub
 
