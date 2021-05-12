@@ -11,7 +11,7 @@ Public Class FrmReporteComperi
         Dim f2 As Date
         f1 = dtpFi.Text
         f2 = dtpFf.Text
-        Dim conexion As New SqlConnection(ConfigurationManager.ConnectionStrings("ferreteria.My.MySettings.FERRETERIAConnectionString").ConnectionString)
+        Dim conexion As New SqlConnection(connectionString)
 
         conexion.Open()
         Dim Adaptador As New SqlDataAdapter
@@ -44,7 +44,7 @@ Public Class FrmReporteComperi
 
         frmReportes.ReportViewer1.LocalReport.DataSources.Clear()
         frmReportes.ReportViewer1.LocalReport.DataSources.Add(Datasource)
-        frmReportes.ReportViewer1.LocalReport.ReportPath = "D:\je_ss\Escritorio\tareas\SIS. INTEGRALES\ferreteria\ferreteria\ferreteria\Reporte-compras-periodo.rdlc"
+        frmReportes.ReportViewer1.LocalReport.ReportPath = rutasReportes + "Reporte-compras-periodo.rdlc"
         frmReportes.ReportViewer1.LocalReport.SetParameters(New ReportParameter() {p1, p2})
         frmReportes.ReportViewer1.RefreshReport()
         frmReportes.Show()

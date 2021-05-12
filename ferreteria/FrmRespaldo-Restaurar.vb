@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
-
+Imports System.Configuration
 Public Class FrmRespaldo_Restaurar
-    Dim conexion = New SqlConnection(ConfigurationManager.ConnectionStrings("ferreteria.My.MySettings.FERRETERIAConnectionString").ConnectionString)
+    Dim conexion = New SqlConnection(connectionStringRestaurar)
     Dim comando As New SqlCommand 'Ejecuta comandos SQL
     Private Sub FrmRespaldo_Restaurar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexion.Open()
@@ -25,10 +25,13 @@ Public Class FrmRespaldo_Restaurar
                 comando.CommandText = "RESTORE DATABASE FERRETERIA FROM DISK = '" & str_RutaArchivo & "' WITH Replace"
                 comando.ExecuteNonQuery()
             End If
-            conexion.Close()
             MsgBox("La restauración fue un exito")
         Catch
+
             MsgBox("A ocurrido un error con la restauracion")
+        Finally
+            conexion.Close()
+
         End Try
     End Sub
 
@@ -48,6 +51,9 @@ Public Class FrmRespaldo_Restaurar
             MsgBox("El respaldo fue un exito")
         Catch
             MsgBox("A ocurrido un error con la restauracion")
+        Finally
+            conexion.Close()
+
         End Try
     End Sub
 End Class

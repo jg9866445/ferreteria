@@ -1,6 +1,5 @@
 ﻿Imports System.Data.SqlClient
 Imports Microsoft.Reporting.WinForms
-Imports System.Configuration
 Public Class FrmReporteDevPeri
     Private Sub FrmReporteDevPeri_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -12,7 +11,7 @@ Public Class FrmReporteDevPeri
         f1 = dtpFi.Text
         f2 = dtpFf.Text
 
-        Dim conexion As New SqlConnection(ConfigurationManager.ConnectionStrings("ferreteria.My.MySettings.FERRETERIAConnectionString").ConnectionString)
+        Dim conexion As New SqlConnection(connectionString)
 
         conexion.Open()
         Dim Adaptador As New SqlDataAdapter
@@ -45,7 +44,7 @@ Public Class FrmReporteDevPeri
 
         frmReportes.ReportViewer1.LocalReport.DataSources.Clear()
         frmReportes.ReportViewer1.LocalReport.DataSources.Add(Datasource)
-        frmReportes.ReportViewer1.LocalReport.ReportPath = "D:\je_ss\Escritorio\tareas\SIS. INTEGRALES\ferreteria\ferreteria\ferreteria\Reporte-devoluciones-periodo.rdlc"
+        frmReportes.ReportViewer1.LocalReport.ReportPath = rutasReportes + "Reporte-devoluciones-periodo.rdlc"
         frmReportes.ReportViewer1.LocalReport.SetParameters(New ReportParameter() {p1, p2})
         frmReportes.ReportViewer1.RefreshReport()
         frmReportes.Show()

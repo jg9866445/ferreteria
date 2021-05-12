@@ -1,8 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports Microsoft.Reporting.WinForms
-Imports System.Configuration
 Public Class FrmReporteDevPer
-    Dim conexion As New SqlConnection(ConfigurationManager.ConnectionStrings("ferreteria.My.MySettings.FERRETERIAConnectionString").ConnectionString)
+    Dim conexion As New SqlConnection(connectionString)
     Dim comando As New SqlCommand 'Ejecuta comandos SQL
     Dim lector As SqlDataReader 'Para ejecutar Select y depositar en este contenedor los registros recuperados
 
@@ -26,7 +25,7 @@ Public Class FrmReporteDevPer
         Dim id = lector(0).ToString
         lector.Close()
 
-        Dim conexion2 = New SqlConnection(ConfigurationManager.ConnectionStrings("ferreteria.My.MySettings.FERRETERIAConnectionString").ConnectionString)
+        Dim conexion2 = New SqlConnection(connectionString)
 
         conexion2.Open()
         Dim Adaptador As New SqlDataAdapter
@@ -47,7 +46,7 @@ Public Class FrmReporteDevPer
         Dim p1 As New ReportParameter("ID", id)
         frmReportes.ReportViewer1.LocalReport.DataSources.Clear()
         frmReportes.ReportViewer1.LocalReport.DataSources.Add(Datasource)
-        frmReportes.ReportViewer1.LocalReport.ReportPath = "D:\je_ss\Escritorio\tareas\SIS. INTEGRALES\ferreteria\ferreteria\ferreteria\Reporte-devoluciones-personal.rdlc"
+        frmReportes.ReportViewer1.LocalReport.ReportPath = rutasReportes + "Reporte-devoluciones-personal.rdlc"
         frmReportes.ReportViewer1.LocalReport.SetParameters(
         New ReportParameter() {p1})
         frmReportes.ReportViewer1.RefreshReport()

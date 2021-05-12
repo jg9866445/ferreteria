@@ -1,16 +1,12 @@
-﻿Imports System.Configuration
-Imports System.Data.SqlClient
+﻿Imports System.Data.SqlClient
 Public Class FrmConsultaVentaFecha
-    Dim conexion As New SqlConnection(ConfigurationManager.ConnectionStrings("ferreteria.My.MySettings.FERRETERIAConnectionString").ConnectionString)
+    Dim conexion As New SqlConnection(connectionString)
     Dim comando As New SqlCommand 'Ejecuta comandos SQL
     Dim lector As SqlDataReader 'Para ejecutar Select y depositar en este contenedor los registros recuperados
-    Dim transaction As SqlTransaction
     Private Sub FrmConsultaVentaFecha_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexion.Open()
         comando = conexion.CreateCommand
-
     End Sub
-
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Buscar.Click
 
         Dim fechaInicial = dtpFechaInicial.Value.Month & "/" & dtpFechaInicial.Value.Day & "/" & dtpFechaInicial.Value.Year

@@ -1,10 +1,8 @@
-﻿Imports System.Configuration
-Imports System.Data.SqlClient
+﻿Imports System.Data.SqlClient
 Public Class FrmBitacora
-    Dim conexion As New SqlConnection(ConfigurationManager.ConnectionStrings("ferreteria.My.MySettings.FERRETERIAConnectionString").ConnectionString)
+    Dim conexion As New SqlConnection(connectionString)
     Dim comando As New SqlCommand 'Ejecuta comandos SQL
     Dim lector As SqlDataReader 'Para ejecutar Select y depositar en este contenedor los registros recuperados
-    Dim transaction As SqlTransaction
 
     Private Sub FrmBitacora_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexion.Open()

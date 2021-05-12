@@ -1,11 +1,11 @@
-﻿Imports System.Configuration
-Imports System.Data.SqlClient
+﻿Imports System.Data.SqlClient
 
 Public Class FrmProducto
-    Dim conexion As New SqlConnection(ConfigurationManager.ConnectionStrings("ferreteria.My.MySettings.FERRETERIAConnectionString").ConnectionString)
+    Dim conexion As New SqlConnection(connectionString)
     Dim comando As New SqlCommand 'Ejecuta comandos SQL
     Dim lector As SqlDataReader 'Para ejecutar Select y depositar en este contenedor los registros recuperados
     Private Sub FrmProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        SqlConnection1.ConnectionString = connectionString
         SqlDataAdapter1.Fill(DataSet11.productos)
         SqlDataAdapter2.Fill(DataSet11.categoria)
     End Sub
@@ -13,6 +13,7 @@ Public Class FrmProducto
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         ProductosBindingSource.AddNew()
         conexion.Open()
+
         comando = conexion.CreateCommand
         comando.CommandText = "SELECT TOP 1 idProducto FROM productos ORDER BY idProducto DESC"
         lector = comando.ExecuteReader
@@ -131,7 +132,7 @@ Public Class FrmProducto
 
     Private Sub FrmProducto_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.F1 Then
-            System.Diagnostics.Process.Start("D:\je_ss\Escritorio\tareas\SIS. INTEGRALES\ferreteria\ferreteria\Ayuda.chm")
+            System.Diagnostics.Process.Start(rutaAyuda + "Ayuda.chm")
         End If
     End Sub
 End Class

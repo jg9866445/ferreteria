@@ -1,10 +1,10 @@
-﻿Imports System.Configuration
-Imports System.Data.SqlClient
+﻿Imports System.Data.SqlClient
 Public Class FrmCategoria
-    Dim conexion As New SqlConnection(ConfigurationManager.ConnectionStrings("ferreteria.My.MySettings.FERRETERIAConnectionString").ConnectionString)
+    Dim conexion As New SqlConnection(connectionString)
     Dim comando As New SqlCommand 'Ejecuta comandos SQL
     Dim lector As SqlDataReader 'Para ejecutar Select y depositar en este contenedor los registros recuperados
     Private Sub FrmCategoria_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        SqlConnection1.ConnectionString = connectionString
         SqlDataAdapter1.Fill(DataSet11.categoria)
     End Sub
 
@@ -93,7 +93,7 @@ Public Class FrmCategoria
 
     Private Sub FrmCategoria_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.F1 Then
-            System.Diagnostics.Process.Start("D:\je_ss\Escritorio\tareas\SIS. INTEGRALES\ferreteria\ferreteria\Ayuda.chm")
+            System.Diagnostics.Process.Start(rutaAyuda + "Ayuda.chm")
         End If
     End Sub
 End Class
