@@ -1,5 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Configuration
+Imports System.ComponentModel
+
 Public Class FrmRespaldo_Restaurar
     Dim conexion = New SqlConnection(connectionStringRestaurar)
     Dim comando As New SqlCommand 'Ejecuta comandos SQL
@@ -29,9 +31,6 @@ Public Class FrmRespaldo_Restaurar
         Catch
 
             MsgBox("A ocurrido un error con la restauracion")
-        Finally
-            conexion.Close()
-
         End Try
     End Sub
 
@@ -51,9 +50,10 @@ Public Class FrmRespaldo_Restaurar
             MsgBox("El respaldo fue un exito")
         Catch
             MsgBox("A ocurrido un error con la restauracion")
-        Finally
-            conexion.Close()
-
         End Try
+    End Sub
+
+    Private Sub FrmRespaldo_Restaurar_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        conexion.Close()
     End Sub
 End Class
