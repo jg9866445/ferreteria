@@ -48,6 +48,11 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>D:\je_ss\Descargas\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
@@ -106,6 +111,12 @@
       <DependentUpon>FrmCategoria.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmCategoria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultasVistas.Designer.vb">
+      <DependentUpon>frmConsultasVistas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultasVistas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMenuCatalogos.Designer.vb">
@@ -323,6 +334,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCategoria.resx">
       <DependentUpon>FrmCategoria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultasVistas.resx">
+      <DependentUpon>frmConsultasVistas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuCatalogos.resx">
       <DependentUpon>FrmMenuCatalogos.vb</DependentUpon>
