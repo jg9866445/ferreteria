@@ -732,3 +732,4 @@ D:\ferreteria\ferreteria\obj\Debug\ferreteria.vbproj.CopyComplete
 D:\ferreteria\ferreteria\obj\Debug\ferreteria.exe
 D:\ferreteria\ferreteria\obj\Debug\ferreteria.xml
 D:\ferreteria\ferreteria\obj\Debug\ferreteria.pdb
+D:\ferreteria\ferreteria\obj\Debug\ferreteria.Importar.resources

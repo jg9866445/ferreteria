@@ -8,12 +8,36 @@ Public Class FrmRespaldo_Restaurar
     Private Sub FrmRespaldo_Restaurar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexion.Open()
         comando = conexion.CreateCommand
+        comando.CommandText = "
+            SET NOCOUNT ON
+            DECLARE @DBName varchar(50)
+            DECLARE @spidstr varchar(8000)
+            DECLARE @ConnKilled smallint
+            SET @ConnKilled=0
+            SET @spidstr = ''
+            Set @DBName = 'FERRETERIA'
+            IF db_id(@DBName) < 4
+            BEGIN
+            PRINT 'Connections to system databases cannot be killed'
+            RETURN
+            END
+            SELECT @spidstr=coalesce(@spidstr,',' )+'kill '+convert(varchar, spid)+ '; '
+            FROM master..sysprocesses WHERE dbid=db_id(@DBName)
+            IF LEN(@spidstr) > 0
+            BEGIN
+            EXEC(@spidstr)
+            SELECT @ConnKilled = COUNT(1)
+            FROM master..sysprocesses WHERE dbid=db_id(@DBName)
+            END"
+        comando.ExecuteNonQuery()
+
         If privilege.Equals("Normal") Then
             btnAbrir.Enabled = False
         End If
     End Sub
 
     Private Sub btnAbrir_Click(sender As Object, e As EventArgs) Handles btnAbrir.Click
+
         Try
             OpenFileDialog1.InitialDirectory = "C:\\"
             OpenFileDialog1.Filter = "Archivos de texto (*.bak)|*.bak"
@@ -22,15 +46,14 @@ Public Class FrmRespaldo_Restaurar
             If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
                 str_RutaArchivo = OpenFileDialog1.FileName
                 txtRuta1.Text = str_RutaArchivo
-                comando.CommandText = "DELETE DATABASE FERRETERIA"
-                comando.ExecuteNonQuery()
+                'comando.CommandText = "DROP DATABASE FERRETERIA"
+                'comando.ExecuteNonQuery()
                 comando.CommandText = "RESTORE DATABASE FERRETERIA FROM DISK = '" & str_RutaArchivo & "' WITH Replace"
                 comando.ExecuteNonQuery()
             End If
             MsgBox("La restauración fue un exito")
-        Catch
-
-            MsgBox("A ocurrido un error con la restauracion")
+        Catch ex As Exception
+            MsgBox("A ocurrido un error con la restauracion" & ex.ToString)
         End Try
     End Sub
 

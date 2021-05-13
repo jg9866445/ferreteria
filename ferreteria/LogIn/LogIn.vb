@@ -26,13 +26,18 @@ Public Class LogIn
         comando.CommandText = "SELECT password, privilege FROM Usuarios WHERE [user]='" & txtUser.Text & "'"
         lector = comando.ExecuteReader
         lector.Read()
+        Dim password, priv As String
+        password = lector(0)
+        priv = lector(1)
+        lector.Close()
+        conexion.Close()
         If n <> 0 Then 'Si existe un usuario con ese username
-            If txtPass.Text.Equals(lector(0)) Then 'Si la password ingresada es correcta
+            If txtPass.Text.Equals(password) Then 'Si la password ingresada es correcta
                 user = txtUser.Text
                 pass = txtPass.Text
                 txtUser.Text = ""
                 txtPass.Text = ""
-                privilege = lector(1)
+                privilege = priv
                 Frmmenu.ShowDialog()
             Else 'Si la password ingresada no es correcta
                 MsgBox("La contraseña ingresada es incorrecta!", MsgBoxStyle.Critical)
@@ -40,7 +45,6 @@ Public Class LogIn
         Else 'Si no existe un usuario con ese username
             MsgBox("El usuario ingresado no es valido!", MsgBoxStyle.Critical)
         End If
-        lector.Close()
-        conexion.Close()
+
     End Sub
 End Class

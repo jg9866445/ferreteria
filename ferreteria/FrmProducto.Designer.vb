@@ -76,6 +76,7 @@ Partial Class FrmProducto
         Me.SqlUpdateCommand2 = New System.Data.SqlClient.SqlCommand()
         Me.SqlDeleteCommand2 = New System.Data.SqlClient.SqlCommand()
         Me.SqlDataAdapter2 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.btnImportardesdeExcel = New System.Windows.Forms.Button()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -94,9 +95,9 @@ Partial Class FrmProducto
         Me.GroupBox3.Controls.Add(Me.btnNuevo)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox3.Location = New System.Drawing.Point(346, 414)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox3.Size = New System.Drawing.Size(212, 93)
         Me.GroupBox3.TabIndex = 41
         Me.GroupBox3.TabStop = False
@@ -105,7 +106,7 @@ Partial Class FrmProducto
         '
         Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
         Me.btnModificar.Location = New System.Drawing.Point(107, 22)
-        Me.btnModificar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnModificar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(86, 27)
         Me.btnModificar.TabIndex = 37
@@ -117,7 +118,7 @@ Partial Class FrmProducto
         Me.btnGrabar.Enabled = False
         Me.btnGrabar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
         Me.btnGrabar.Location = New System.Drawing.Point(13, 61)
-        Me.btnGrabar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnGrabar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnGrabar.Name = "btnGrabar"
         Me.btnGrabar.Size = New System.Drawing.Size(86, 27)
         Me.btnGrabar.TabIndex = 36
@@ -128,7 +129,7 @@ Partial Class FrmProducto
         '
         Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
         Me.btnSalir.Location = New System.Drawing.Point(107, 61)
-        Me.btnSalir.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnSalir.Margin = New System.Windows.Forms.Padding(2)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(86, 27)
         Me.btnSalir.TabIndex = 35
@@ -139,7 +140,7 @@ Partial Class FrmProducto
         '
         Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
         Me.btnNuevo.Location = New System.Drawing.Point(13, 22)
-        Me.btnNuevo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnNuevo.Margin = New System.Windows.Forms.Padding(2)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(86, 27)
         Me.btnNuevo.TabIndex = 34
@@ -154,9 +155,9 @@ Partial Class FrmProducto
         Me.GroupBox2.Controls.Add(Me.btnInicio)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox2.Location = New System.Drawing.Point(100, 414)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Size = New System.Drawing.Size(212, 96)
         Me.GroupBox2.TabIndex = 40
         Me.GroupBox2.TabStop = False
@@ -165,7 +166,7 @@ Partial Class FrmProducto
         '
         Me.btnSiguiente.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
         Me.btnSiguiente.Location = New System.Drawing.Point(107, 22)
-        Me.btnSiguiente.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnSiguiente.Margin = New System.Windows.Forms.Padding(2)
         Me.btnSiguiente.Name = "btnSiguiente"
         Me.btnSiguiente.Size = New System.Drawing.Size(86, 27)
         Me.btnSiguiente.TabIndex = 37
@@ -176,7 +177,7 @@ Partial Class FrmProducto
         '
         Me.btnAnterior.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
         Me.btnAnterior.Location = New System.Drawing.Point(13, 61)
-        Me.btnAnterior.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnAnterior.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAnterior.Name = "btnAnterior"
         Me.btnAnterior.Size = New System.Drawing.Size(86, 27)
         Me.btnAnterior.TabIndex = 36
@@ -187,7 +188,7 @@ Partial Class FrmProducto
         '
         Me.btnUltimo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
         Me.btnUltimo.Location = New System.Drawing.Point(107, 61)
-        Me.btnUltimo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnUltimo.Margin = New System.Windows.Forms.Padding(2)
         Me.btnUltimo.Name = "btnUltimo"
         Me.btnUltimo.Size = New System.Drawing.Size(86, 27)
         Me.btnUltimo.TabIndex = 35
@@ -198,7 +199,7 @@ Partial Class FrmProducto
         '
         Me.btnInicio.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
         Me.btnInicio.Location = New System.Drawing.Point(13, 22)
-        Me.btnInicio.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnInicio.Margin = New System.Windows.Forms.Padding(2)
         Me.btnInicio.Name = "btnInicio"
         Me.btnInicio.Size = New System.Drawing.Size(86, 27)
         Me.btnInicio.TabIndex = 34
@@ -213,7 +214,7 @@ Partial Class FrmProducto
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdProductoDataGridViewTextBoxColumn, Me.NombreProductoDataGridViewTextBoxColumn, Me.DetalleDataGridViewTextBoxColumn, Me.IdCategoriaDataGridViewTextBoxColumn, Me.PrecioDataGridViewTextBoxColumn, Me.CantidadDataGridViewTextBoxColumn, Me.MaximoDataGridViewTextBoxColumn, Me.MinimoDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.ProductosBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(19, 259)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidth = 51
@@ -315,9 +316,9 @@ Partial Class FrmProducto
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
         Me.GroupBox1.Location = New System.Drawing.Point(9, 106)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Size = New System.Drawing.Size(674, 132)
         Me.GroupBox1.TabIndex = 38
         Me.GroupBox1.TabStop = False
@@ -332,7 +333,7 @@ Partial Class FrmProducto
         Me.cboCategoria.Enabled = False
         Me.cboCategoria.FormattingEnabled = True
         Me.cboCategoria.Location = New System.Drawing.Point(549, 97)
-        Me.cboCategoria.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboCategoria.Margin = New System.Windows.Forms.Padding(2)
         Me.cboCategoria.Name = "cboCategoria"
         Me.cboCategoria.Size = New System.Drawing.Size(104, 21)
         Me.cboCategoria.TabIndex = 35
@@ -360,7 +361,7 @@ Partial Class FrmProducto
         Me.txtMinimo.Enabled = False
         Me.txtMinimo.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtMinimo.Location = New System.Drawing.Point(386, 98)
-        Me.txtMinimo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtMinimo.Margin = New System.Windows.Forms.Padding(2)
         Me.txtMinimo.Name = "txtMinimo"
         Me.txtMinimo.Size = New System.Drawing.Size(80, 21)
         Me.txtMinimo.TabIndex = 33
@@ -371,7 +372,7 @@ Partial Class FrmProducto
         Me.txtMaximo.Enabled = False
         Me.txtMaximo.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtMaximo.Location = New System.Drawing.Point(228, 98)
-        Me.txtMaximo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtMaximo.Margin = New System.Windows.Forms.Padding(2)
         Me.txtMaximo.Name = "txtMaximo"
         Me.txtMaximo.Size = New System.Drawing.Size(85, 21)
         Me.txtMaximo.TabIndex = 32
@@ -382,7 +383,7 @@ Partial Class FrmProducto
         Me.txtCantidad.Enabled = False
         Me.txtCantidad.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCantidad.Location = New System.Drawing.Point(76, 97)
-        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(2)
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(78, 21)
         Me.txtCantidad.TabIndex = 31
@@ -393,7 +394,7 @@ Partial Class FrmProducto
         Me.txtPrecio.Enabled = False
         Me.txtPrecio.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPrecio.Location = New System.Drawing.Point(454, 62)
-        Me.txtPrecio.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtPrecio.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.Size = New System.Drawing.Size(84, 21)
         Me.txtPrecio.TabIndex = 30
@@ -404,7 +405,7 @@ Partial Class FrmProducto
         Me.txtDetalleP.Enabled = False
         Me.txtDetalleP.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDetalleP.Location = New System.Drawing.Point(140, 62)
-        Me.txtDetalleP.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtDetalleP.Margin = New System.Windows.Forms.Padding(2)
         Me.txtDetalleP.Name = "txtDetalleP"
         Me.txtDetalleP.Size = New System.Drawing.Size(259, 21)
         Me.txtDetalleP.TabIndex = 28
@@ -415,7 +416,7 @@ Partial Class FrmProducto
         Me.txtNombre.Enabled = False
         Me.txtNombre.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombre.Location = New System.Drawing.Point(322, 31)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(2)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(260, 21)
         Me.txtNombre.TabIndex = 27
@@ -426,7 +427,7 @@ Partial Class FrmProducto
         Me.txtIdProductos.Enabled = False
         Me.txtIdProductos.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtIdProductos.Location = New System.Drawing.Point(90, 30)
-        Me.txtIdProductos.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtIdProductos.Margin = New System.Windows.Forms.Padding(2)
         Me.txtIdProductos.Name = "txtIdProductos"
         Me.txtIdProductos.Size = New System.Drawing.Size(85, 21)
         Me.txtIdProductos.TabIndex = 26
@@ -526,7 +527,7 @@ Partial Class FrmProducto
         Me.PictureBox3.BackgroundImage = Global.ferreteria.My.Resources.Resources.fed11c516d402c77c569d4856e521056
         Me.PictureBox3.Image = Global.ferreteria.My.Resources.Resources.LOGO
         Me.PictureBox3.Location = New System.Drawing.Point(436, 12)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(247, 82)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -601,12 +602,22 @@ Partial Class FrmProducto
         Me.SqlDataAdapter2.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "categoria", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("idCategoria", "idCategoria"), New System.Data.Common.DataColumnMapping("nombre", "nombre"), New System.Data.Common.DataColumnMapping("descripcion", "descripcion")})})
         Me.SqlDataAdapter2.UpdateCommand = Me.SqlUpdateCommand2
         '
+        'btnImportardesdeExcel
+        '
+        Me.btnImportardesdeExcel.Location = New System.Drawing.Point(582, 436)
+        Me.btnImportardesdeExcel.Name = "btnImportardesdeExcel"
+        Me.btnImportardesdeExcel.Size = New System.Drawing.Size(98, 52)
+        Me.btnImportardesdeExcel.TabIndex = 64
+        Me.btnImportardesdeExcel.Text = "Importar desde Excel"
+        Me.btnImportardesdeExcel.UseVisualStyleBackColor = True
+        '
         'FrmProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.ferreteria.My.Resources.Resources.fed11c516d402c77c569d4856e521056
         Me.ClientSize = New System.Drawing.Size(692, 518)
+        Me.Controls.Add(Me.btnImportardesdeExcel)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
@@ -614,7 +625,7 @@ Partial Class FrmProducto
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.KeyPreview = True
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmProducto"
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
@@ -682,4 +693,5 @@ Partial Class FrmProducto
     Friend WithEvents SqlUpdateCommand2 As SqlClient.SqlCommand
     Friend WithEvents SqlDeleteCommand2 As SqlClient.SqlCommand
     Friend WithEvents SqlDataAdapter2 As SqlClient.SqlDataAdapter
+    Friend WithEvents btnImportardesdeExcel As Button
 End Class
