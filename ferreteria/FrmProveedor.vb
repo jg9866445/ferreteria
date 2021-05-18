@@ -35,6 +35,9 @@ Public Class FrmProveedor
         txtRFC.Enabled = True
         txtTelefono.Enabled = True
         txtCeluar.Enabled = True
+        txtCiudad.Enabled = True
+        txtEstado.Enabled = True
+        txtCiudad.SelectedIndex = 1
         btnGrabar.Enabled = True
 
 
@@ -50,6 +53,8 @@ Public Class FrmProveedor
         txtRFC.Enabled = False
         txtTelefono.Enabled = False
         txtCeluar.Enabled = False
+        txtCiudad.Enabled = False
+        txtEstado.Enabled = False
         btnGrabar.Enabled = False
 
         btnSiguiente.Enabled = True
@@ -83,6 +88,8 @@ Public Class FrmProveedor
         txtRFC.Enabled = True
         txtTelefono.Enabled = True
         txtCeluar.Enabled = True
+        txtCiudad.Enabled = True
+        txtEstado.Enabled = True
         btnGrabar.Enabled = True
 
     End Sub
@@ -105,7 +112,7 @@ Public Class FrmProveedor
         ProveedoresBindingSource.MoveLast()
     End Sub
 
-    Private Sub SqlDataAdapter1_RowUpdated(sender As Object, e As SqlRowUpdatedEventArgs) Handles SqlDataAdapter1.RowUpdated
+    Private Sub SqlDataAdapter1_RowUpdated(sender As Object, e As SqlRowUpdatedEventArgs)
 
         If e.Status = UpdateStatus.ErrorsOccurred Then
             MessageBox.Show(e.Errors.Message & vbCrLf &
@@ -131,6 +138,8 @@ Public Class FrmProveedor
         txtRFC.Enabled = False
         txtTelefono.Enabled = False
         txtCeluar.Enabled = False
+        txtCiudad.Enabled = False
+        txtEstado.Enabled = False
         btnGrabar.Enabled = False
         Close()
     End Sub

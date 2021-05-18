@@ -6,7 +6,7 @@ Public Class FrmPersonal
     Dim lector As SqlDataReader 'Para ejecutar Select y depositar en este contenedor los registros recuperados
     Private Sub FrmPersonal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SqlConnection1.ConnectionString = connectionString
-        SqlDataAdapter1.Fill(DataSet11.personal)
+        SqlDataAdapter1.Fill(DataSet1.personal)
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
@@ -33,6 +33,10 @@ Public Class FrmPersonal
         txtColonia.Enabled = True
         txtTelefono.Enabled = True
         txtCelular.Enabled = True
+        txtCiudad.Enabled = True
+        txtCiudad.SelectedIndex = 1
+        txtEstado.Enabled = True
+        txtPuesto.Enabled = True
         btnGrabar.Enabled = True
 
 
@@ -53,6 +57,9 @@ Public Class FrmPersonal
         txtColonia.Enabled = True
         txtTelefono.Enabled = True
         txtCelular.Enabled = True
+        txtCiudad.Enabled = True
+        txtEstado.Enabled = True
+        txtPuesto.Enabled = True
         btnGrabar.Enabled = True
 
     End Sub
@@ -65,6 +72,9 @@ Public Class FrmPersonal
         txtColonia.Enabled = False
         txtTelefono.Enabled = False
         txtCelular.Enabled = False
+        txtCiudad.Enabled = False
+        txtEstado.Enabled = False
+        txtPuesto.Enabled = False
         btnGrabar.Enabled = False
 
         btnSiguiente.Enabled = True
@@ -76,9 +86,9 @@ Public Class FrmPersonal
 
         PersonalBindingSource.EndEdit()
 
-        SqlDataAdapter1.Update(DataSet11.personal)
-        DataSet11.Clear()
-        SqlDataAdapter1.Fill(DataSet11.personal)
+        SqlDataAdapter1.Update(DataSet1.personal)
+        DataSet1.Clear()
+        SqlDataAdapter1.Fill(DataSet1.personal)
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
@@ -94,6 +104,9 @@ Public Class FrmPersonal
         txtCp.Enabled = False
         txtColonia.Enabled = False
         txtTelefono.Enabled = False
+        txtCiudad.Enabled = False
+        txtEstado.Enabled = False
+        txtPuesto.Enabled = False
         txtCelular.Enabled = False
         btnGrabar.Enabled = False
         Close()
@@ -117,7 +130,7 @@ Public Class FrmPersonal
     End Sub
 
 
-    Private Sub SqlDataAdapter1_RowUpdated(sender As Object, e As SqlRowUpdatedEventArgs) Handles SqlDataAdapter1.RowUpdated
+    Private Sub SqlDataAdapter1_RowUpdated(sender As Object, e As SqlRowUpdatedEventArgs)
         If e.Status = UpdateStatus.ErrorsOccurred Then
             MessageBox.Show(e.Errors.Message & vbCrLf &
                                 e.Row.Item("NOMBRE", DataRowVersion.Original) & vbCrLf &

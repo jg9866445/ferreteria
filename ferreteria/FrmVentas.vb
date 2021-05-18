@@ -8,6 +8,7 @@ Public Class FrmVentas
         txtFecha.Text = Now.Month & "/" & Now.Day & "/" & Now.Year
         cboNombreEmpleado.Enabled = False
         cboNombreProducto.Enabled = False
+        cboCategoria.Enabled = False
         btnAgregar.Enabled = False
         txtCantidad.Enabled = False
         txtEdoVenta.Enabled = False
@@ -24,17 +25,17 @@ Public Class FrmVentas
         End While
         lector.Close()
 
-        comando.CommandText = "Select * From productos"
+        comando.CommandText = "Select nombre From categoria"
         lector = comando.ExecuteReader
         While lector.Read()
-            cboNombreProducto.Items.Add(lector(1))
+            cboCategoria.Items.Add(lector(0))
         End While
         lector.Close()
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         cboNombreEmpleado.Enabled = True
-        cboNombreProducto.Enabled = True
+        cboCategoria.Enabled = True
         btnAgregar.Enabled = True
         btnGuardar.Enabled = True
         btnNuevo.Enabled = False
@@ -58,7 +59,20 @@ Public Class FrmVentas
             txtIdVenta.Text = ""
         End If
     End Sub
-
+    Private Sub cboCategoria_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCategoria.SelectedIndexChanged
+        cboNombreProducto.Items.Clear()
+        txtProducto.Text = ""
+        txtDetalleProducto.Text = ""
+        txtPrecio.Text = ""
+        txtCantidad.Value = 0
+        comando.CommandText = "Select * From productos WHERE idCategoria=" & cboCategoria.SelectedIndex + 1
+        lector = comando.ExecuteReader
+        While lector.Read()
+            cboNombreProducto.Items.Add(lector(1))
+        End While
+        lector.Close()
+        cboNombreProducto.Enabled = True
+    End Sub
     Private Sub cboNombreEmpleado_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboNombreEmpleado.SelectedIndexChanged
         comando.CommandText = "Select * from personal where nombre='" & cboNombreEmpleado.Text & "'"
         lector = comando.ExecuteReader
@@ -71,14 +85,18 @@ Public Class FrmVentas
         comando.CommandText = "Select * from productos where nombreProducto='" & cboNombreProducto.Text & "'"
         lector = comando.ExecuteReader
         lector.Read()
-        txtProducto.Text = lector(0)
-        txtDetalleProducto.Text = lector(2)
-        txtPrecio.Text = lector(4)
-        txtCantidad.Value = 0
-        txtCantidad.Maximum = lector(5)
+        If lector(5) < 0 Then
+            MsgBox("No hay existencia de este producto en almacen")
+        Else
+            txtProducto.Text = lector(0)
+            txtDetalleProducto.Text = lector(2)
+            txtPrecio.Text = lector(4)
+            txtCantidad.Value = 0
+            txtCantidad.Maximum = lector(5)
+            cboDescuento.Enabled = True
+            txtCantidad.Enabled = True
+        End If
         lector.Close()
-        cboDescuento.Enabled = True
-        txtCantidad.Enabled = True
     End Sub
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
@@ -117,7 +135,7 @@ Public Class FrmVentas
             Dim r As String
             Dim idc As Integer
 
-            r = "insert into Ventas(idPersonal, subTotal, iva, descuento, total, fecha, numFactura, edoVenta) values(" & CInt(txtPersonal.Text) & "," & CDbl(txtSubtotal.Text) & ", " & CDbl(txtIva.Text) & ", " & CDbl(txtdes.Text) & "," & CDbl(txtTotal.Text) & ",'" & (txtFecha.Text) & "'," & CDbl(txtNumFactura.Text) & ",'" & CChar(txtEdoVenta.Text) & "')"
+            r = "insert into Ventas(idPersonal, subTotal, iva, descuento, total, fecha, numFactura, edoVenta) values(" & CInt(txtPersonal.Text) & "," & CDbl(txtSubtotal.Text) & ", " & CDbl(txtIva.Text) & ", " & CDbl(txtdes.Text) & "," & CDbl(txtTotal.Text) & ",'" & Date.Today.ToString("dd/MM/yyyy") & "'," & CDbl(txtNumFactura.Text) & ",'" & CChar(txtEdoVenta.Text) & "')"
             comando.CommandText = r
             comando.ExecuteNonQuery()
 
@@ -155,6 +173,7 @@ Public Class FrmVentas
             End If
 
         Catch ex As Exception
+            MsgBox("Error de " & ex.Message.Replace("'", " ").ToString)
             Dim conexion2 As New SqlConnection("Data Source=.;Initial Catalog= master;Integrated Security = Yes")
             Dim comando2 As New SqlCommand
             conexion2.Open()
@@ -164,7 +183,6 @@ Public Class FrmVentas
             comando2.CommandText = R
             comando2.ExecuteNonQuery()
             conexion2.Close()
-            MsgBox("Error de " & ex.Message.Replace("'", " ").ToString)
             MsgBox("Error enviado a la bitacora")
         End Try
     End Sub
@@ -200,4 +218,6 @@ Public Class FrmVentas
             btnAtrasRejilla.Enabled = False
         End If
     End Sub
+
+
 End Class

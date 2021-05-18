@@ -35,18 +35,7 @@ Partial Class FrmPersonal
         Me.btnUltimo = New System.Windows.Forms.Button()
         Me.btnInicio = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.IdPersonalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CelularDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DomicilioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CpDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColoniaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PersonalBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataSet11 = New ferreteria.DataSet1()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtCelular = New System.Windows.Forms.TextBox()
-        Me.txtTelefono = New System.Windows.Forms.TextBox()
         Me.txtColonia = New System.Windows.Forms.TextBox()
         Me.txtCp = New System.Windows.Forms.TextBox()
         Me.txtDireccion = New System.Windows.Forms.TextBox()
@@ -61,20 +50,42 @@ Partial Class FrmPersonal
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtEstado = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.txtPuesto = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand()
-        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection()
         Me.SqlInsertCommand1 = New System.Data.SqlClient.SqlCommand()
         Me.SqlUpdateCommand1 = New System.Data.SqlClient.SqlCommand()
         Me.SqlDeleteCommand1 = New System.Data.SqlClient.SqlCommand()
         Me.SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection()
+        Me.DataSet11 = New ferreteria.DataSet1()
+        Me.DataSet1 = New ferreteria.DataSet1()
+        Me.PersonalBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.IdPersonalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CelularDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DomicilioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CpDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColoniaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CiudadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EstadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PuestoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.txtCelular = New System.Windows.Forms.TextBox()
+        Me.txtTelefono = New System.Windows.Forms.TextBox()
+        Me.txtCiudad = New System.Windows.Forms.ComboBox()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PersonalBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PersonalBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox3
@@ -85,21 +96,21 @@ Partial Class FrmPersonal
         Me.GroupBox3.Controls.Add(Me.btnSalir)
         Me.GroupBox3.Controls.Add(Me.btnNuevo)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox3.Location = New System.Drawing.Point(467, 487)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox3.Location = New System.Drawing.Point(350, 453)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GroupBox3.Size = New System.Drawing.Size(283, 114)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox3.Size = New System.Drawing.Size(212, 93)
         Me.GroupBox3.TabIndex = 41
         Me.GroupBox3.TabStop = False
         '
         'btnModificar
         '
         Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.btnModificar.Location = New System.Drawing.Point(143, 27)
-        Me.btnModificar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnModificar.Location = New System.Drawing.Point(107, 22)
+        Me.btnModificar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(115, 33)
+        Me.btnModificar.Size = New System.Drawing.Size(86, 27)
         Me.btnModificar.TabIndex = 37
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.UseVisualStyleBackColor = True
@@ -107,10 +118,10 @@ Partial Class FrmPersonal
         'btnGrabar
         '
         Me.btnGrabar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.btnGrabar.Location = New System.Drawing.Point(17, 75)
-        Me.btnGrabar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnGrabar.Location = New System.Drawing.Point(13, 61)
+        Me.btnGrabar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnGrabar.Name = "btnGrabar"
-        Me.btnGrabar.Size = New System.Drawing.Size(115, 33)
+        Me.btnGrabar.Size = New System.Drawing.Size(86, 27)
         Me.btnGrabar.TabIndex = 36
         Me.btnGrabar.Text = "Grabar"
         Me.btnGrabar.UseVisualStyleBackColor = True
@@ -118,10 +129,10 @@ Partial Class FrmPersonal
         'btnSalir
         '
         Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.btnSalir.Location = New System.Drawing.Point(143, 75)
-        Me.btnSalir.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnSalir.Location = New System.Drawing.Point(107, 61)
+        Me.btnSalir.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(115, 33)
+        Me.btnSalir.Size = New System.Drawing.Size(86, 27)
         Me.btnSalir.TabIndex = 35
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
@@ -129,10 +140,10 @@ Partial Class FrmPersonal
         'btnNuevo
         '
         Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.btnNuevo.Location = New System.Drawing.Point(17, 27)
-        Me.btnNuevo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnNuevo.Location = New System.Drawing.Point(13, 22)
+        Me.btnNuevo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(115, 33)
+        Me.btnNuevo.Size = New System.Drawing.Size(86, 27)
         Me.btnNuevo.TabIndex = 34
         Me.btnNuevo.Text = "Nuevo"
         Me.btnNuevo.UseVisualStyleBackColor = True
@@ -145,21 +156,21 @@ Partial Class FrmPersonal
         Me.GroupBox2.Controls.Add(Me.btnUltimo)
         Me.GroupBox2.Controls.Add(Me.btnInicio)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox2.Location = New System.Drawing.Point(152, 487)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox2.Location = New System.Drawing.Point(114, 453)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GroupBox2.Size = New System.Drawing.Size(283, 114)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(212, 93)
         Me.GroupBox2.TabIndex = 40
         Me.GroupBox2.TabStop = False
         '
         'btnSiguiente
         '
         Me.btnSiguiente.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.btnSiguiente.Location = New System.Drawing.Point(143, 27)
-        Me.btnSiguiente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnSiguiente.Location = New System.Drawing.Point(107, 22)
+        Me.btnSiguiente.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnSiguiente.Name = "btnSiguiente"
-        Me.btnSiguiente.Size = New System.Drawing.Size(115, 33)
+        Me.btnSiguiente.Size = New System.Drawing.Size(86, 27)
         Me.btnSiguiente.TabIndex = 37
         Me.btnSiguiente.Text = "Siguiente"
         Me.btnSiguiente.UseVisualStyleBackColor = True
@@ -167,10 +178,10 @@ Partial Class FrmPersonal
         'btnAnterior
         '
         Me.btnAnterior.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.btnAnterior.Location = New System.Drawing.Point(17, 75)
-        Me.btnAnterior.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnAnterior.Location = New System.Drawing.Point(13, 61)
+        Me.btnAnterior.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnAnterior.Name = "btnAnterior"
-        Me.btnAnterior.Size = New System.Drawing.Size(115, 33)
+        Me.btnAnterior.Size = New System.Drawing.Size(86, 27)
         Me.btnAnterior.TabIndex = 36
         Me.btnAnterior.Text = "Anterior"
         Me.btnAnterior.UseVisualStyleBackColor = True
@@ -178,10 +189,10 @@ Partial Class FrmPersonal
         'btnUltimo
         '
         Me.btnUltimo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.btnUltimo.Location = New System.Drawing.Point(143, 75)
-        Me.btnUltimo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnUltimo.Location = New System.Drawing.Point(107, 61)
+        Me.btnUltimo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnUltimo.Name = "btnUltimo"
-        Me.btnUltimo.Size = New System.Drawing.Size(115, 33)
+        Me.btnUltimo.Size = New System.Drawing.Size(86, 27)
         Me.btnUltimo.TabIndex = 35
         Me.btnUltimo.Text = "Ultimo" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.btnUltimo.UseVisualStyleBackColor = True
@@ -189,10 +200,10 @@ Partial Class FrmPersonal
         'btnInicio
         '
         Me.btnInicio.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.btnInicio.Location = New System.Drawing.Point(17, 27)
-        Me.btnInicio.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnInicio.Location = New System.Drawing.Point(13, 22)
+        Me.btnInicio.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnInicio.Name = "btnInicio"
-        Me.btnInicio.Size = New System.Drawing.Size(115, 33)
+        Me.btnInicio.Size = New System.Drawing.Size(86, 27)
         Me.btnInicio.TabIndex = 34
         Me.btnInicio.Text = "Inicio" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.btnInicio.UseVisualStyleBackColor = True
@@ -202,88 +213,28 @@ Partial Class FrmPersonal
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdPersonalDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.CelularDataGridViewTextBoxColumn, Me.DomicilioDataGridViewTextBoxColumn, Me.CpDataGridViewTextBoxColumn, Me.ColoniaDataGridViewTextBoxColumn})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdPersonalDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.CelularDataGridViewTextBoxColumn, Me.DomicilioDataGridViewTextBoxColumn, Me.CpDataGridViewTextBoxColumn, Me.ColoniaDataGridViewTextBoxColumn, Me.CiudadDataGridViewTextBoxColumn, Me.EstadoDataGridViewTextBoxColumn, Me.PuestoDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.PersonalBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(33, 305)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DataGridView1.Location = New System.Drawing.Point(25, 305)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(859, 176)
+        Me.DataGridView1.Size = New System.Drawing.Size(644, 143)
         Me.DataGridView1.TabIndex = 39
-        '
-        'IdPersonalDataGridViewTextBoxColumn
-        '
-        Me.IdPersonalDataGridViewTextBoxColumn.DataPropertyName = "idPersonal"
-        Me.IdPersonalDataGridViewTextBoxColumn.HeaderText = "idPersonal"
-        Me.IdPersonalDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdPersonalDataGridViewTextBoxColumn.Name = "IdPersonalDataGridViewTextBoxColumn"
-        Me.IdPersonalDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NombreDataGridViewTextBoxColumn
-        '
-        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "nombre"
-        Me.NombreDataGridViewTextBoxColumn.HeaderText = "nombre"
-        Me.NombreDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
-        Me.NombreDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TelefonoDataGridViewTextBoxColumn
-        '
-        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
-        Me.TelefonoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CelularDataGridViewTextBoxColumn
-        '
-        Me.CelularDataGridViewTextBoxColumn.DataPropertyName = "celular"
-        Me.CelularDataGridViewTextBoxColumn.HeaderText = "celular"
-        Me.CelularDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.CelularDataGridViewTextBoxColumn.Name = "CelularDataGridViewTextBoxColumn"
-        Me.CelularDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'DomicilioDataGridViewTextBoxColumn
-        '
-        Me.DomicilioDataGridViewTextBoxColumn.DataPropertyName = "domicilio"
-        Me.DomicilioDataGridViewTextBoxColumn.HeaderText = "domicilio"
-        Me.DomicilioDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.DomicilioDataGridViewTextBoxColumn.Name = "DomicilioDataGridViewTextBoxColumn"
-        Me.DomicilioDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CpDataGridViewTextBoxColumn
-        '
-        Me.CpDataGridViewTextBoxColumn.DataPropertyName = "cp"
-        Me.CpDataGridViewTextBoxColumn.HeaderText = "cp"
-        Me.CpDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.CpDataGridViewTextBoxColumn.Name = "CpDataGridViewTextBoxColumn"
-        Me.CpDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ColoniaDataGridViewTextBoxColumn
-        '
-        Me.ColoniaDataGridViewTextBoxColumn.DataPropertyName = "colonia"
-        Me.ColoniaDataGridViewTextBoxColumn.HeaderText = "colonia"
-        Me.ColoniaDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.ColoniaDataGridViewTextBoxColumn.Name = "ColoniaDataGridViewTextBoxColumn"
-        Me.ColoniaDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'PersonalBindingSource
-        '
-        Me.PersonalBindingSource.DataMember = "personal"
-        Me.PersonalBindingSource.DataSource = Me.DataSet11
-        '
-        'DataSet11
-        '
-        Me.DataSet11.DataSetName = "DataSet1"
-        Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.GroupBox1.Controls.Add(Me.txtCelular)
+        Me.GroupBox1.Controls.Add(Me.txtCiudad)
         Me.GroupBox1.Controls.Add(Me.txtTelefono)
+        Me.GroupBox1.Controls.Add(Me.txtCelular)
+        Me.GroupBox1.Controls.Add(Me.txtPuesto)
+        Me.GroupBox1.Controls.Add(Me.Label12)
+        Me.GroupBox1.Controls.Add(Me.txtEstado)
+        Me.GroupBox1.Controls.Add(Me.Label11)
+        Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.txtColonia)
         Me.GroupBox1.Controls.Add(Me.txtCp)
         Me.GroupBox1.Controls.Add(Me.txtDireccion)
@@ -298,46 +249,24 @@ Partial Class FrmPersonal
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox1.Location = New System.Drawing.Point(33, 119)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox1.Location = New System.Drawing.Point(25, 97)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GroupBox1.Size = New System.Drawing.Size(859, 162)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(644, 191)
         Me.GroupBox1.TabIndex = 38
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos de Personal"
-        '
-        'txtCelular
-        '
-        Me.txtCelular.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "celular", True))
-        Me.txtCelular.Enabled = False
-        Me.txtCelular.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCelular.Location = New System.Drawing.Point(85, 121)
-        Me.txtCelular.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.txtCelular.Name = "txtCelular"
-        Me.txtCelular.Size = New System.Drawing.Size(209, 24)
-        Me.txtCelular.TabIndex = 33
-        '
-        'txtTelefono
-        '
-        Me.txtTelefono.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "telefono", True))
-        Me.txtTelefono.Enabled = False
-        Me.txtTelefono.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTelefono.Location = New System.Drawing.Point(397, 121)
-        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(191, 24)
-        Me.txtTelefono.TabIndex = 32
         '
         'txtColonia
         '
         Me.txtColonia.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "colonia", True))
         Me.txtColonia.Enabled = False
         Me.txtColonia.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtColonia.Location = New System.Drawing.Point(647, 79)
-        Me.txtColonia.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtColonia.Location = New System.Drawing.Point(485, 64)
+        Me.txtColonia.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtColonia.Name = "txtColonia"
-        Me.txtColonia.Size = New System.Drawing.Size(193, 24)
+        Me.txtColonia.Size = New System.Drawing.Size(146, 21)
         Me.txtColonia.TabIndex = 30
         '
         'txtCp
@@ -345,10 +274,10 @@ Partial Class FrmPersonal
         Me.txtCp.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "cp", True))
         Me.txtCp.Enabled = False
         Me.txtCp.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCp.Location = New System.Drawing.Point(459, 79)
-        Me.txtCp.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtCp.Location = New System.Drawing.Point(344, 64)
+        Me.txtCp.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtCp.Name = "txtCp"
-        Me.txtCp.Size = New System.Drawing.Size(100, 24)
+        Me.txtCp.Size = New System.Drawing.Size(76, 21)
         Me.txtCp.TabIndex = 29
         '
         'txtDireccion
@@ -356,10 +285,10 @@ Partial Class FrmPersonal
         Me.txtDireccion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "domicilio", True))
         Me.txtDireccion.Enabled = False
         Me.txtDireccion.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDireccion.Location = New System.Drawing.Point(101, 79)
-        Me.txtDireccion.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtDireccion.Location = New System.Drawing.Point(76, 64)
+        Me.txtDireccion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(291, 24)
+        Me.txtDireccion.Size = New System.Drawing.Size(219, 21)
         Me.txtDireccion.TabIndex = 28
         '
         'txtNombre
@@ -367,31 +296,32 @@ Partial Class FrmPersonal
         Me.txtNombre.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "nombre", True))
         Me.txtNombre.Enabled = False
         Me.txtNombre.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombre.Location = New System.Drawing.Point(435, 38)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtNombre.Location = New System.Drawing.Point(326, 31)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(407, 24)
+        Me.txtNombre.Size = New System.Drawing.Size(306, 21)
         Me.txtNombre.TabIndex = 27
         '
         'txtIdPersonal
         '
         Me.txtIdPersonal.AccessibleRole = System.Windows.Forms.AccessibleRole.Dial
-        Me.txtIdPersonal.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "idPersonal", True))
+        Me.txtIdPersonal.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "idPersonal", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
         Me.txtIdPersonal.Enabled = False
         Me.txtIdPersonal.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtIdPersonal.Location = New System.Drawing.Point(119, 37)
-        Me.txtIdPersonal.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtIdPersonal.Location = New System.Drawing.Point(89, 30)
+        Me.txtIdPersonal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtIdPersonal.Name = "txtIdPersonal"
-        Me.txtIdPersonal.Size = New System.Drawing.Size(112, 24)
+        Me.txtIdPersonal.Size = New System.Drawing.Size(85, 21)
         Me.txtIdPersonal.TabIndex = 26
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label9.Location = New System.Drawing.Point(315, 124)
+        Me.Label9.Location = New System.Drawing.Point(236, 142)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(74, 16)
+        Me.Label9.Size = New System.Drawing.Size(59, 13)
         Me.Label9.TabIndex = 25
         Me.Label9.Text = "Teléfono:"
         '
@@ -399,9 +329,10 @@ Partial Class FrmPersonal
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label8.Location = New System.Drawing.Point(11, 124)
+        Me.Label8.Location = New System.Drawing.Point(10, 142)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(61, 16)
+        Me.Label8.Size = New System.Drawing.Size(50, 13)
         Me.Label8.TabIndex = 24
         Me.Label8.Text = "Celular:"
         '
@@ -409,18 +340,20 @@ Partial Class FrmPersonal
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label7.Location = New System.Drawing.Point(363, 145)
+        Me.Label7.Location = New System.Drawing.Point(272, 159)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(0, 16)
+        Me.Label7.Size = New System.Drawing.Size(0, 13)
         Me.Label7.TabIndex = 23
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label6.Location = New System.Drawing.Point(408, 82)
+        Me.Label6.Location = New System.Drawing.Point(306, 67)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(44, 16)
+        Me.Label6.Size = New System.Drawing.Size(39, 13)
         Me.Label6.TabIndex = 22
         Me.Label6.Text = "C.P. :"
         '
@@ -428,9 +361,10 @@ Partial Class FrmPersonal
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label5.Location = New System.Drawing.Point(569, 82)
+        Me.Label5.Location = New System.Drawing.Point(427, 67)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(65, 16)
+        Me.Label5.Size = New System.Drawing.Size(53, 13)
         Me.Label5.TabIndex = 21
         Me.Label5.Text = "Colonia:"
         '
@@ -438,9 +372,10 @@ Partial Class FrmPersonal
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label4.Location = New System.Drawing.Point(8, 82)
+        Me.Label4.Location = New System.Drawing.Point(10, 67)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(78, 16)
+        Me.Label4.Size = New System.Drawing.Size(63, 13)
         Me.Label4.TabIndex = 20
         Me.Label4.Text = "Dirección:"
         '
@@ -448,9 +383,10 @@ Partial Class FrmPersonal
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label3.Location = New System.Drawing.Point(248, 41)
+        Me.Label3.Location = New System.Drawing.Point(186, 33)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(163, 16)
+        Me.Label3.Size = New System.Drawing.Size(129, 13)
         Me.Label3.TabIndex = 19
         Me.Label3.Text = "Nombre de empleado:"
         '
@@ -458,9 +394,10 @@ Partial Class FrmPersonal
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label2.Location = New System.Drawing.Point(13, 41)
+        Me.Label2.Location = New System.Drawing.Point(10, 33)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(87, 16)
+        Me.Label2.Size = New System.Drawing.Size(71, 13)
         Me.Label2.TabIndex = 18
         Me.Label2.Text = "IdPersonal:"
         '
@@ -470,67 +407,243 @@ Partial Class FrmPersonal
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(193, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(253, Byte), Integer))
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.2!, System.Drawing.FontStyle.Bold)
         Me.Label1.Image = Global.ferreteria.My.Resources.Resources.fed11c516d402c77c569d4856e521056
-        Me.Label1.Location = New System.Drawing.Point(187, 59)
+        Me.Label1.Location = New System.Drawing.Point(140, 48)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(208, 26)
+        Me.Label1.Size = New System.Drawing.Size(175, 22)
         Me.Label1.TabIndex = 37
         Me.Label1.Text = "Catálogo Personal"
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackgroundImage = Global.ferreteria.My.Resources.Resources.fed11c516d402c77c569d4856e521056
+        Me.PictureBox3.Image = Global.ferreteria.My.Resources.Resources.LOGO
+        Me.PictureBox3.Location = New System.Drawing.Point(422, 10)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(247, 82)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 63
+        Me.PictureBox3.TabStop = False
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.Label10.Location = New System.Drawing.Point(10, 104)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(50, 13)
+        Me.Label10.TabIndex = 34
+        Me.Label10.Text = "Ciudad:"
+        '
+        'txtEstado
+        '
+        Me.txtEstado.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "estado", True))
+        Me.txtEstado.Enabled = False
+        Me.txtEstado.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEstado.Location = New System.Drawing.Point(285, 101)
+        Me.txtEstado.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtEstado.Name = "txtEstado"
+        Me.txtEstado.Size = New System.Drawing.Size(139, 21)
+        Me.txtEstado.TabIndex = 37
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.Label11.Location = New System.Drawing.Point(223, 104)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(50, 13)
+        Me.Label11.TabIndex = 36
+        Me.Label11.Text = "Estado:"
+        '
+        'txtPuesto
+        '
+        Me.txtPuesto.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "puesto", True))
+        Me.txtPuesto.Enabled = False
+        Me.txtPuesto.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPuesto.Location = New System.Drawing.Point(487, 101)
+        Me.txtPuesto.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtPuesto.Name = "txtPuesto"
+        Me.txtPuesto.Size = New System.Drawing.Size(144, 21)
+        Me.txtPuesto.TabIndex = 39
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.Label12.Location = New System.Drawing.Point(430, 104)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(50, 13)
+        Me.Label12.TabIndex = 38
+        Me.Label12.Text = "Puesto:"
+        '
         'SqlSelectCommand1
         '
-        Me.SqlSelectCommand1.CommandText = "SELECT idPersonal, nombre, telefono, celular, domicilio, cp, colonia" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FROM     pe" &
-    "rsonal"
+        Me.SqlSelectCommand1.CommandText = "SELECT        personal.*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FROM            personal"
         Me.SqlSelectCommand1.Connection = Me.SqlConnection1
-        '
-        'SqlConnection1
-        '
-        Me.SqlConnection1.ConnectionString = "Data Source=.;Initial Catalog=FERRETERIA;Integrated Security=True"
-        Me.SqlConnection1.FireInfoMessageEventOnUserErrors = False
         '
         'SqlInsertCommand1
         '
         Me.SqlInsertCommand1.CommandText = resources.GetString("SqlInsertCommand1.CommandText")
         Me.SqlInsertCommand1.Connection = Me.SqlConnection1
-        Me.SqlInsertCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@idPersonal", System.Data.SqlDbType.Int, 0, "idPersonal"), New System.Data.SqlClient.SqlParameter("@nombre", System.Data.SqlDbType.VarChar, 0, "nombre"), New System.Data.SqlClient.SqlParameter("@telefono", System.Data.SqlDbType.Int, 0, "telefono"), New System.Data.SqlClient.SqlParameter("@celular", System.Data.SqlDbType.Int, 0, "celular"), New System.Data.SqlClient.SqlParameter("@domicilio", System.Data.SqlDbType.VarChar, 0, "domicilio"), New System.Data.SqlClient.SqlParameter("@cp", System.Data.SqlDbType.Int, 0, "cp"), New System.Data.SqlClient.SqlParameter("@colonia", System.Data.SqlDbType.VarChar, 0, "colonia")})
+        Me.SqlInsertCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@idPersonal", System.Data.SqlDbType.Int, 0, "idPersonal"), New System.Data.SqlClient.SqlParameter("@nombre", System.Data.SqlDbType.VarChar, 0, "nombre"), New System.Data.SqlClient.SqlParameter("@telefono", System.Data.SqlDbType.Int, 0, "telefono"), New System.Data.SqlClient.SqlParameter("@celular", System.Data.SqlDbType.Int, 0, "celular"), New System.Data.SqlClient.SqlParameter("@domicilio", System.Data.SqlDbType.VarChar, 0, "domicilio"), New System.Data.SqlClient.SqlParameter("@cp", System.Data.SqlDbType.Int, 0, "cp"), New System.Data.SqlClient.SqlParameter("@colonia", System.Data.SqlDbType.VarChar, 0, "colonia"), New System.Data.SqlClient.SqlParameter("@ciudad", System.Data.SqlDbType.VarChar, 0, "ciudad"), New System.Data.SqlClient.SqlParameter("@estado", System.Data.SqlDbType.VarChar, 0, "estado"), New System.Data.SqlClient.SqlParameter("@puesto", System.Data.SqlDbType.VarChar, 0, "puesto")})
         '
         'SqlUpdateCommand1
         '
         Me.SqlUpdateCommand1.CommandText = resources.GetString("SqlUpdateCommand1.CommandText")
         Me.SqlUpdateCommand1.Connection = Me.SqlConnection1
-        Me.SqlUpdateCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@idPersonal", System.Data.SqlDbType.Int, 0, "idPersonal"), New System.Data.SqlClient.SqlParameter("@nombre", System.Data.SqlDbType.VarChar, 0, "nombre"), New System.Data.SqlClient.SqlParameter("@telefono", System.Data.SqlDbType.Int, 0, "telefono"), New System.Data.SqlClient.SqlParameter("@celular", System.Data.SqlDbType.Int, 0, "celular"), New System.Data.SqlClient.SqlParameter("@domicilio", System.Data.SqlDbType.VarChar, 0, "domicilio"), New System.Data.SqlClient.SqlParameter("@cp", System.Data.SqlDbType.Int, 0, "cp"), New System.Data.SqlClient.SqlParameter("@colonia", System.Data.SqlDbType.VarChar, 0, "colonia"), New System.Data.SqlClient.SqlParameter("@Original_idPersonal", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "idPersonal", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_nombre", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "nombre", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_nombre", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "nombre", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_telefono", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "telefono", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_telefono", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "telefono", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_celular", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "celular", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_celular", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "celular", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_domicilio", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "domicilio", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_domicilio", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "domicilio", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_cp", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "cp", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_cp", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cp", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_colonia", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "colonia", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_colonia", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "colonia", System.Data.DataRowVersion.Original, Nothing)})
+        Me.SqlUpdateCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@idPersonal", System.Data.SqlDbType.Int, 0, "idPersonal"), New System.Data.SqlClient.SqlParameter("@nombre", System.Data.SqlDbType.VarChar, 0, "nombre"), New System.Data.SqlClient.SqlParameter("@telefono", System.Data.SqlDbType.Int, 0, "telefono"), New System.Data.SqlClient.SqlParameter("@celular", System.Data.SqlDbType.Int, 0, "celular"), New System.Data.SqlClient.SqlParameter("@domicilio", System.Data.SqlDbType.VarChar, 0, "domicilio"), New System.Data.SqlClient.SqlParameter("@cp", System.Data.SqlDbType.Int, 0, "cp"), New System.Data.SqlClient.SqlParameter("@colonia", System.Data.SqlDbType.VarChar, 0, "colonia"), New System.Data.SqlClient.SqlParameter("@ciudad", System.Data.SqlDbType.VarChar, 0, "ciudad"), New System.Data.SqlClient.SqlParameter("@estado", System.Data.SqlDbType.VarChar, 0, "estado"), New System.Data.SqlClient.SqlParameter("@puesto", System.Data.SqlDbType.VarChar, 0, "puesto"), New System.Data.SqlClient.SqlParameter("@Original_idPersonal", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "idPersonal", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_nombre", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "nombre", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_nombre", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "nombre", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_telefono", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "telefono", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_telefono", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "telefono", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_celular", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "celular", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_celular", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "celular", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_domicilio", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "domicilio", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_domicilio", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "domicilio", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_cp", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "cp", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_cp", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cp", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_colonia", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "colonia", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_colonia", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "colonia", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_ciudad", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "ciudad", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_ciudad", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "ciudad", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_estado", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "estado", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_estado", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "estado", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_puesto", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "puesto", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_puesto", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "puesto", System.Data.DataRowVersion.Original, Nothing)})
         '
         'SqlDeleteCommand1
         '
         Me.SqlDeleteCommand1.CommandText = resources.GetString("SqlDeleteCommand1.CommandText")
         Me.SqlDeleteCommand1.Connection = Me.SqlConnection1
-        Me.SqlDeleteCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Original_idPersonal", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "idPersonal", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_nombre", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "nombre", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_nombre", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "nombre", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_telefono", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "telefono", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_telefono", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "telefono", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_celular", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "celular", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_celular", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "celular", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_domicilio", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "domicilio", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_domicilio", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "domicilio", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_cp", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "cp", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_cp", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cp", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_colonia", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "colonia", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_colonia", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "colonia", System.Data.DataRowVersion.Original, Nothing)})
+        Me.SqlDeleteCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Original_idPersonal", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "idPersonal", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_nombre", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "nombre", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_nombre", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "nombre", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_telefono", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "telefono", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_telefono", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "telefono", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_celular", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "celular", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_celular", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "celular", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_domicilio", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "domicilio", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_domicilio", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "domicilio", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_cp", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "cp", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_cp", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cp", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_colonia", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "colonia", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_colonia", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "colonia", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_ciudad", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "ciudad", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_ciudad", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "ciudad", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_estado", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "estado", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_estado", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "estado", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_puesto", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "puesto", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_puesto", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "puesto", System.Data.DataRowVersion.Original, Nothing)})
         '
         'SqlDataAdapter1
         '
         Me.SqlDataAdapter1.DeleteCommand = Me.SqlDeleteCommand1
         Me.SqlDataAdapter1.InsertCommand = Me.SqlInsertCommand1
         Me.SqlDataAdapter1.SelectCommand = Me.SqlSelectCommand1
-        Me.SqlDataAdapter1.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "personal", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("idPersonal", "idPersonal"), New System.Data.Common.DataColumnMapping("nombre", "nombre"), New System.Data.Common.DataColumnMapping("telefono", "telefono"), New System.Data.Common.DataColumnMapping("celular", "celular"), New System.Data.Common.DataColumnMapping("domicilio", "domicilio"), New System.Data.Common.DataColumnMapping("cp", "cp"), New System.Data.Common.DataColumnMapping("colonia", "colonia")})})
+        Me.SqlDataAdapter1.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "personal", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("idPersonal", "idPersonal"), New System.Data.Common.DataColumnMapping("nombre", "nombre"), New System.Data.Common.DataColumnMapping("telefono", "telefono"), New System.Data.Common.DataColumnMapping("celular", "celular"), New System.Data.Common.DataColumnMapping("domicilio", "domicilio"), New System.Data.Common.DataColumnMapping("cp", "cp"), New System.Data.Common.DataColumnMapping("colonia", "colonia"), New System.Data.Common.DataColumnMapping("ciudad", "ciudad"), New System.Data.Common.DataColumnMapping("estado", "estado"), New System.Data.Common.DataColumnMapping("puesto", "puesto")})})
         Me.SqlDataAdapter1.UpdateCommand = Me.SqlUpdateCommand1
         '
-        'PictureBox3
+        'SqlConnection1
         '
-        Me.PictureBox3.BackgroundImage = Global.ferreteria.My.Resources.Resources.fed11c516d402c77c569d4856e521056
-        Me.PictureBox3.Image = Global.ferreteria.My.Resources.Resources.LOGO
-        Me.PictureBox3.Location = New System.Drawing.Point(563, 12)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(329, 101)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 63
-        Me.PictureBox3.TabStop = False
+        Me.SqlConnection1.ConnectionString = "Data Source=LAPTOP-LK5KS500\DAISYGIGABYTE;Initial Catalog=FERRETERIA;Integrated S" &
+    "ecurity=True"
+        Me.SqlConnection1.FireInfoMessageEventOnUserErrors = False
+        '
+        'DataSet11
+        '
+        Me.DataSet11.DataSetName = "DataSet1"
+        Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'PersonalBindingSource
+        '
+        Me.PersonalBindingSource.DataMember = "personal"
+        Me.PersonalBindingSource.DataSource = Me.DataSet1
+        '
+        'IdPersonalDataGridViewTextBoxColumn
+        '
+        Me.IdPersonalDataGridViewTextBoxColumn.DataPropertyName = "idPersonal"
+        Me.IdPersonalDataGridViewTextBoxColumn.HeaderText = "idPersonal"
+        Me.IdPersonalDataGridViewTextBoxColumn.Name = "IdPersonalDataGridViewTextBoxColumn"
+        Me.IdPersonalDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NombreDataGridViewTextBoxColumn
+        '
+        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.HeaderText = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        Me.NombreDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TelefonoDataGridViewTextBoxColumn
+        '
+        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
+        Me.TelefonoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CelularDataGridViewTextBoxColumn
+        '
+        Me.CelularDataGridViewTextBoxColumn.DataPropertyName = "celular"
+        Me.CelularDataGridViewTextBoxColumn.HeaderText = "celular"
+        Me.CelularDataGridViewTextBoxColumn.Name = "CelularDataGridViewTextBoxColumn"
+        Me.CelularDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DomicilioDataGridViewTextBoxColumn
+        '
+        Me.DomicilioDataGridViewTextBoxColumn.DataPropertyName = "domicilio"
+        Me.DomicilioDataGridViewTextBoxColumn.HeaderText = "domicilio"
+        Me.DomicilioDataGridViewTextBoxColumn.Name = "DomicilioDataGridViewTextBoxColumn"
+        Me.DomicilioDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CpDataGridViewTextBoxColumn
+        '
+        Me.CpDataGridViewTextBoxColumn.DataPropertyName = "cp"
+        Me.CpDataGridViewTextBoxColumn.HeaderText = "cp"
+        Me.CpDataGridViewTextBoxColumn.Name = "CpDataGridViewTextBoxColumn"
+        Me.CpDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ColoniaDataGridViewTextBoxColumn
+        '
+        Me.ColoniaDataGridViewTextBoxColumn.DataPropertyName = "colonia"
+        Me.ColoniaDataGridViewTextBoxColumn.HeaderText = "colonia"
+        Me.ColoniaDataGridViewTextBoxColumn.Name = "ColoniaDataGridViewTextBoxColumn"
+        Me.ColoniaDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CiudadDataGridViewTextBoxColumn
+        '
+        Me.CiudadDataGridViewTextBoxColumn.DataPropertyName = "ciudad"
+        Me.CiudadDataGridViewTextBoxColumn.HeaderText = "ciudad"
+        Me.CiudadDataGridViewTextBoxColumn.Name = "CiudadDataGridViewTextBoxColumn"
+        Me.CiudadDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'EstadoDataGridViewTextBoxColumn
+        '
+        Me.EstadoDataGridViewTextBoxColumn.DataPropertyName = "estado"
+        Me.EstadoDataGridViewTextBoxColumn.HeaderText = "estado"
+        Me.EstadoDataGridViewTextBoxColumn.Name = "EstadoDataGridViewTextBoxColumn"
+        Me.EstadoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PuestoDataGridViewTextBoxColumn
+        '
+        Me.PuestoDataGridViewTextBoxColumn.DataPropertyName = "puesto"
+        Me.PuestoDataGridViewTextBoxColumn.HeaderText = "puesto"
+        Me.PuestoDataGridViewTextBoxColumn.Name = "PuestoDataGridViewTextBoxColumn"
+        Me.PuestoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'txtCelular
+        '
+        Me.txtCelular.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "celular", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "0000000000"))
+        Me.txtCelular.Enabled = False
+        Me.txtCelular.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCelular.Location = New System.Drawing.Point(72, 139)
+        Me.txtCelular.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtCelular.MaxLength = 10
+        Me.txtCelular.Name = "txtCelular"
+        Me.txtCelular.Size = New System.Drawing.Size(144, 21)
+        Me.txtCelular.TabIndex = 40
+        '
+        'txtTelefono
+        '
+        Me.txtTelefono.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "telefono", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "0000000000"))
+        Me.txtTelefono.Enabled = False
+        Me.txtTelefono.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTelefono.Location = New System.Drawing.Point(299, 139)
+        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtTelefono.MaxLength = 10
+        Me.txtTelefono.Name = "txtTelefono"
+        Me.txtTelefono.Size = New System.Drawing.Size(144, 21)
+        Me.txtTelefono.TabIndex = 41
+        '
+        'txtCiudad
+        '
+        Me.txtCiudad.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "ciudad", True))
+        Me.txtCiudad.Enabled = False
+        Me.txtCiudad.FormattingEnabled = True
+        Me.txtCiudad.Items.AddRange(New Object() {"tamazula", "ciudad guzman", "zapotiltic", "tuxpan", "sayula", "huescalapa", "gomez farias", "tecalitlan"})
+        Me.txtCiudad.Location = New System.Drawing.Point(76, 101)
+        Me.txtCiudad.Name = "txtCiudad"
+        Me.txtCiudad.Size = New System.Drawing.Size(140, 21)
+        Me.txtCiudad.TabIndex = 42
         '
         'FrmPersonal
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.ferreteria.My.Resources.Resources.fed11c516d402c77c569d4856e521056
-        Me.ClientSize = New System.Drawing.Size(925, 618)
+        Me.ClientSize = New System.Drawing.Size(694, 554)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
@@ -538,17 +651,18 @@ Partial Class FrmPersonal
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.KeyPreview = True
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "FrmPersonal"
         Me.Text = "Personal"
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PersonalBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PersonalBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -566,8 +680,6 @@ Partial Class FrmPersonal
     Friend WithEvents btnInicio As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents txtCelular As TextBox
-    Friend WithEvents txtTelefono As TextBox
     Friend WithEvents txtColonia As TextBox
     Friend WithEvents txtCp As TextBox
     Friend WithEvents txtDireccion As TextBox
@@ -582,6 +694,12 @@ Partial Class FrmPersonal
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents txtPuesto As TextBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents txtEstado As TextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label10 As Label
     Friend WithEvents SqlSelectCommand1 As SqlClient.SqlCommand
     Friend WithEvents SqlConnection1 As SqlClient.SqlConnection
     Friend WithEvents SqlInsertCommand1 As SqlClient.SqlCommand
@@ -589,7 +707,6 @@ Partial Class FrmPersonal
     Friend WithEvents SqlDeleteCommand1 As SqlClient.SqlCommand
     Friend WithEvents SqlDataAdapter1 As SqlClient.SqlDataAdapter
     Friend WithEvents DataSet11 As DataSet1
-    Friend WithEvents PersonalBindingSource As BindingSource
     Friend WithEvents IdPersonalDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TelefonoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -597,5 +714,12 @@ Partial Class FrmPersonal
     Friend WithEvents DomicilioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CpDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ColoniaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents CiudadDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EstadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PuestoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PersonalBindingSource As BindingSource
+    Friend WithEvents DataSet1 As DataSet1
+    Friend WithEvents txtTelefono As TextBox
+    Friend WithEvents txtCelular As TextBox
+    Friend WithEvents txtCiudad As ComboBox
 End Class
