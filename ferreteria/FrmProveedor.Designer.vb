@@ -26,6 +26,12 @@ Partial Class FrmProveedor
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmProveedor))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtCiudad = New System.Windows.Forms.ComboBox()
+        Me.ProveedoresBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet11 = New ferreteria.DataSet1()
+        Me.txtEstado = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.txtRFC = New System.Windows.Forms.TextBox()
         Me.txtCeluar = New System.Windows.Forms.TextBox()
         Me.txtTelefono = New System.Windows.Forms.TextBox()
@@ -43,6 +49,16 @@ Partial Class FrmProveedor
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IdProveedorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CelularDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DomicilioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CpDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColoniaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RfcDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CiudadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EstadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnSiguiente = New System.Windows.Forms.Button()
         Me.btnAnterior = New System.Windows.Forms.Button()
@@ -54,35 +70,19 @@ Partial Class FrmProveedor
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.txtCiudad = New System.Windows.Forms.ComboBox()
-        Me.txtEstado = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection()
         Me.SqlInsertCommand1 = New System.Data.SqlClient.SqlCommand()
         Me.SqlUpdateCommand1 = New System.Data.SqlClient.SqlCommand()
         Me.SqlDeleteCommand1 = New System.Data.SqlClient.SqlCommand()
         Me.SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter()
-        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection()
-        Me.DataSet11 = New ferreteria.DataSet1()
-        Me.ProveedoresBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.IdProveedorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CelularDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DomicilioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CpDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColoniaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RfcDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CiudadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EstadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.ProveedoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ProveedoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -130,6 +130,60 @@ Partial Class FrmProveedor
         Me.GroupBox1.TabIndex = 18
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos de Proveedor"
+        '
+        'txtCiudad
+        '
+        Me.txtCiudad.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource, "ciudad", True))
+        Me.txtCiudad.Enabled = False
+        Me.txtCiudad.FormattingEnabled = True
+        Me.txtCiudad.Items.AddRange(New Object() {"tamazula", "ciudad guzman", "zapotiltic", "tuxpan", "sayula", "huescalapa", "gomez farias", "tecalitlan"})
+        Me.txtCiudad.Location = New System.Drawing.Point(79, 133)
+        Me.txtCiudad.Name = "txtCiudad"
+        Me.txtCiudad.Size = New System.Drawing.Size(140, 21)
+        Me.txtCiudad.TabIndex = 46
+        '
+        'ProveedoresBindingSource
+        '
+        Me.ProveedoresBindingSource.DataMember = "proveedores"
+        Me.ProveedoresBindingSource.DataSource = Me.DataSet11
+        '
+        'DataSet11
+        '
+        Me.DataSet11.DataSetName = "DataSet1"
+        Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'txtEstado
+        '
+        Me.txtEstado.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource, "estado", True))
+        Me.txtEstado.Enabled = False
+        Me.txtEstado.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEstado.Location = New System.Drawing.Point(288, 133)
+        Me.txtEstado.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtEstado.Name = "txtEstado"
+        Me.txtEstado.Size = New System.Drawing.Size(139, 21)
+        Me.txtEstado.TabIndex = 45
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.Label11.Location = New System.Drawing.Point(226, 136)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(50, 13)
+        Me.Label11.TabIndex = 44
+        Me.Label11.Text = "Estado:"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
+        Me.Label10.Location = New System.Drawing.Point(13, 136)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(50, 13)
+        Me.Label10.TabIndex = 43
+        Me.Label10.Text = "Ciudad:"
         '
         'txtRFC
         '
@@ -322,6 +376,76 @@ Partial Class FrmProveedor
         Me.DataGridView1.Size = New System.Drawing.Size(646, 143)
         Me.DataGridView1.TabIndex = 19
         '
+        'IdProveedorDataGridViewTextBoxColumn
+        '
+        Me.IdProveedorDataGridViewTextBoxColumn.DataPropertyName = "idProveedor"
+        Me.IdProveedorDataGridViewTextBoxColumn.HeaderText = "idProveedor"
+        Me.IdProveedorDataGridViewTextBoxColumn.Name = "IdProveedorDataGridViewTextBoxColumn"
+        Me.IdProveedorDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NombreDataGridViewTextBoxColumn
+        '
+        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.HeaderText = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        Me.NombreDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TelefonoDataGridViewTextBoxColumn
+        '
+        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
+        Me.TelefonoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CelularDataGridViewTextBoxColumn
+        '
+        Me.CelularDataGridViewTextBoxColumn.DataPropertyName = "celular"
+        Me.CelularDataGridViewTextBoxColumn.HeaderText = "celular"
+        Me.CelularDataGridViewTextBoxColumn.Name = "CelularDataGridViewTextBoxColumn"
+        Me.CelularDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DomicilioDataGridViewTextBoxColumn
+        '
+        Me.DomicilioDataGridViewTextBoxColumn.DataPropertyName = "domicilio"
+        Me.DomicilioDataGridViewTextBoxColumn.HeaderText = "domicilio"
+        Me.DomicilioDataGridViewTextBoxColumn.Name = "DomicilioDataGridViewTextBoxColumn"
+        Me.DomicilioDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CpDataGridViewTextBoxColumn
+        '
+        Me.CpDataGridViewTextBoxColumn.DataPropertyName = "cp"
+        Me.CpDataGridViewTextBoxColumn.HeaderText = "cp"
+        Me.CpDataGridViewTextBoxColumn.Name = "CpDataGridViewTextBoxColumn"
+        Me.CpDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ColoniaDataGridViewTextBoxColumn
+        '
+        Me.ColoniaDataGridViewTextBoxColumn.DataPropertyName = "colonia"
+        Me.ColoniaDataGridViewTextBoxColumn.HeaderText = "colonia"
+        Me.ColoniaDataGridViewTextBoxColumn.Name = "ColoniaDataGridViewTextBoxColumn"
+        Me.ColoniaDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'RfcDataGridViewTextBoxColumn
+        '
+        Me.RfcDataGridViewTextBoxColumn.DataPropertyName = "rfc"
+        Me.RfcDataGridViewTextBoxColumn.HeaderText = "rfc"
+        Me.RfcDataGridViewTextBoxColumn.Name = "RfcDataGridViewTextBoxColumn"
+        Me.RfcDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CiudadDataGridViewTextBoxColumn
+        '
+        Me.CiudadDataGridViewTextBoxColumn.DataPropertyName = "ciudad"
+        Me.CiudadDataGridViewTextBoxColumn.HeaderText = "ciudad"
+        Me.CiudadDataGridViewTextBoxColumn.Name = "CiudadDataGridViewTextBoxColumn"
+        Me.CiudadDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'EstadoDataGridViewTextBoxColumn
+        '
+        Me.EstadoDataGridViewTextBoxColumn.DataPropertyName = "estado"
+        Me.EstadoDataGridViewTextBoxColumn.HeaderText = "estado"
+        Me.EstadoDataGridViewTextBoxColumn.Name = "EstadoDataGridViewTextBoxColumn"
+        Me.EstadoDataGridViewTextBoxColumn.ReadOnly = True
+        '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.ButtonFace
@@ -455,54 +579,15 @@ Partial Class FrmProveedor
         Me.PictureBox3.TabIndex = 63
         Me.PictureBox3.TabStop = False
         '
-        'txtCiudad
-        '
-        Me.txtCiudad.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource, "ciudad", True))
-        Me.txtCiudad.Enabled = False
-        Me.txtCiudad.FormattingEnabled = True
-        Me.txtCiudad.Items.AddRange(New Object() {"tamazula", "ciudad guzman", "zapotiltic", "tuxpan", "sayula", "huescalapa", "gomez farias", "tecalitlan"})
-        Me.txtCiudad.Location = New System.Drawing.Point(79, 133)
-        Me.txtCiudad.Name = "txtCiudad"
-        Me.txtCiudad.Size = New System.Drawing.Size(140, 21)
-        Me.txtCiudad.TabIndex = 46
-        '
-        'txtEstado
-        '
-        Me.txtEstado.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource, "estado", True))
-        Me.txtEstado.Enabled = False
-        Me.txtEstado.Font = New System.Drawing.Font("Lucida Console", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEstado.Location = New System.Drawing.Point(288, 133)
-        Me.txtEstado.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtEstado.Name = "txtEstado"
-        Me.txtEstado.Size = New System.Drawing.Size(139, 21)
-        Me.txtEstado.TabIndex = 45
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label11.Location = New System.Drawing.Point(226, 136)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(50, 13)
-        Me.Label11.TabIndex = 44
-        Me.Label11.Text = "Estado:"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!, System.Drawing.FontStyle.Bold)
-        Me.Label10.Location = New System.Drawing.Point(13, 136)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(50, 13)
-        Me.Label10.TabIndex = 43
-        Me.Label10.Text = "Ciudad:"
-        '
         'SqlSelectCommand1
         '
         Me.SqlSelectCommand1.CommandText = "SELECT        proveedores.*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FROM            proveedores"
         Me.SqlSelectCommand1.Connection = Me.SqlConnection1
+        '
+        'SqlConnection1
+        '
+        Me.SqlConnection1.ConnectionString = "Data Source=.;Initial Catalog=FERRETERIA;Integrated Security=True"
+        Me.SqlConnection1.FireInfoMessageEventOnUserErrors = False
         '
         'SqlInsertCommand1
         '
@@ -530,92 +615,6 @@ Partial Class FrmProveedor
         Me.SqlDataAdapter1.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "proveedores", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("idProveedor", "idProveedor"), New System.Data.Common.DataColumnMapping("nombre", "nombre"), New System.Data.Common.DataColumnMapping("telefono", "telefono"), New System.Data.Common.DataColumnMapping("celular", "celular"), New System.Data.Common.DataColumnMapping("domicilio", "domicilio"), New System.Data.Common.DataColumnMapping("cp", "cp"), New System.Data.Common.DataColumnMapping("colonia", "colonia"), New System.Data.Common.DataColumnMapping("rfc", "rfc"), New System.Data.Common.DataColumnMapping("ciudad", "ciudad"), New System.Data.Common.DataColumnMapping("estado", "estado")})})
         Me.SqlDataAdapter1.UpdateCommand = Me.SqlUpdateCommand1
         '
-        'SqlConnection1
-        '
-        Me.SqlConnection1.ConnectionString = "Data Source=LAPTOP-LK5KS500\DAISYGIGABYTE;Initial Catalog=FERRETERIA;Integrated S" &
-    "ecurity=True"
-        Me.SqlConnection1.FireInfoMessageEventOnUserErrors = False
-        '
-        'DataSet11
-        '
-        Me.DataSet11.DataSetName = "DataSet1"
-        Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ProveedoresBindingSource
-        '
-        Me.ProveedoresBindingSource.DataMember = "proveedores"
-        Me.ProveedoresBindingSource.DataSource = Me.DataSet11
-        '
-        'IdProveedorDataGridViewTextBoxColumn
-        '
-        Me.IdProveedorDataGridViewTextBoxColumn.DataPropertyName = "idProveedor"
-        Me.IdProveedorDataGridViewTextBoxColumn.HeaderText = "idProveedor"
-        Me.IdProveedorDataGridViewTextBoxColumn.Name = "IdProveedorDataGridViewTextBoxColumn"
-        Me.IdProveedorDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NombreDataGridViewTextBoxColumn
-        '
-        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "nombre"
-        Me.NombreDataGridViewTextBoxColumn.HeaderText = "nombre"
-        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
-        Me.NombreDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TelefonoDataGridViewTextBoxColumn
-        '
-        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
-        Me.TelefonoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CelularDataGridViewTextBoxColumn
-        '
-        Me.CelularDataGridViewTextBoxColumn.DataPropertyName = "celular"
-        Me.CelularDataGridViewTextBoxColumn.HeaderText = "celular"
-        Me.CelularDataGridViewTextBoxColumn.Name = "CelularDataGridViewTextBoxColumn"
-        Me.CelularDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'DomicilioDataGridViewTextBoxColumn
-        '
-        Me.DomicilioDataGridViewTextBoxColumn.DataPropertyName = "domicilio"
-        Me.DomicilioDataGridViewTextBoxColumn.HeaderText = "domicilio"
-        Me.DomicilioDataGridViewTextBoxColumn.Name = "DomicilioDataGridViewTextBoxColumn"
-        Me.DomicilioDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CpDataGridViewTextBoxColumn
-        '
-        Me.CpDataGridViewTextBoxColumn.DataPropertyName = "cp"
-        Me.CpDataGridViewTextBoxColumn.HeaderText = "cp"
-        Me.CpDataGridViewTextBoxColumn.Name = "CpDataGridViewTextBoxColumn"
-        Me.CpDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ColoniaDataGridViewTextBoxColumn
-        '
-        Me.ColoniaDataGridViewTextBoxColumn.DataPropertyName = "colonia"
-        Me.ColoniaDataGridViewTextBoxColumn.HeaderText = "colonia"
-        Me.ColoniaDataGridViewTextBoxColumn.Name = "ColoniaDataGridViewTextBoxColumn"
-        Me.ColoniaDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'RfcDataGridViewTextBoxColumn
-        '
-        Me.RfcDataGridViewTextBoxColumn.DataPropertyName = "rfc"
-        Me.RfcDataGridViewTextBoxColumn.HeaderText = "rfc"
-        Me.RfcDataGridViewTextBoxColumn.Name = "RfcDataGridViewTextBoxColumn"
-        Me.RfcDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CiudadDataGridViewTextBoxColumn
-        '
-        Me.CiudadDataGridViewTextBoxColumn.DataPropertyName = "ciudad"
-        Me.CiudadDataGridViewTextBoxColumn.HeaderText = "ciudad"
-        Me.CiudadDataGridViewTextBoxColumn.Name = "CiudadDataGridViewTextBoxColumn"
-        Me.CiudadDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'EstadoDataGridViewTextBoxColumn
-        '
-        Me.EstadoDataGridViewTextBoxColumn.DataPropertyName = "estado"
-        Me.EstadoDataGridViewTextBoxColumn.HeaderText = "estado"
-        Me.EstadoDataGridViewTextBoxColumn.Name = "EstadoDataGridViewTextBoxColumn"
-        Me.EstadoDataGridViewTextBoxColumn.ReadOnly = True
-        '
         'FrmProveedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -634,12 +633,12 @@ Partial Class FrmProveedor
         Me.Text = "Proveedores"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.ProveedoresBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ProveedoresBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
