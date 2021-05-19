@@ -20,49 +20,117 @@ Public Class frmConsultasVistas
 
         chk.Name = "chk"
 
-        DGVADHOC.Rows.Add(0, "Productos", "idProducto", "Clave del producto (ID)")
-        DGVADHOC.Rows.Add(0, "Productos", "nombreProducto", "Clave del producto (ID)")
-        DGVADHOC.Rows.Add(0, "Productos", "detalle", "Descripción del producto")
-        DGVADHOC.Rows.Add(0, "Productos", "idCategoria", "Clave de la categoría del producto (ID)")
-        DGVADHOC.Rows.Add(0, "Productos", "precio", "Precio de venta del producto")
-        DGVADHOC.Rows.Add(0, "Productos", "cantidad", "Número de existencias del producto")
-        DGVADHOC.Rows.Add(0, "Productos", "maximo", "Máximo en stock del producto")
-        DGVADHOC.Rows.Add(0, "Productos", "minimo", "Minímo en stock del producto")
-        DGVADHOC.Rows.Add(0, "categoria", "IdCategoria", "ID_Categoria")
-        DGVADHOC.Rows.Add(0, "categoria", "nombre", "Nombre de la categoría")
-        DGVADHOC.Rows.Add(0, "categoria", "descripcion", "Nombre de la categoría")
+
+        DGVADHOC.Rows.Add(0, "compras", "idCompras", "..")
+        DGVADHOC.Rows.Add(0, "compras", "idProveedor", "..")
+        DGVADHOC.Rows.Add(0, "compras", "subTotal", "..")
+        DGVADHOC.Rows.Add(0, "compras", "iva", "..")
+        DGVADHOC.Rows.Add(0, "compras", "total", "..")
+        DGVADHOC.Rows.Add(0, "compras", "fecha", "..")
+        DGVADHOC.Rows.Add(0, "proveedores", "nombre", "..")
+        DGVADHOC.Rows.Add(0, "proveedores", "telefono", "..")
+        DGVADHOC.Rows.Add(0, "proveedores", "celular", "..")
+        DGVADHOC.Rows.Add(0, "proveedores", "domicilio", "..")
+        DGVADHOC.Rows.Add(0, "proveedores", "cp", "..")
+        DGVADHOC.Rows.Add(0, "proveedores", "colonia", "..")
+        DGVADHOC.Rows.Add(0, "proveedores", "rfc", "..")
+        DGVADHOC.Rows.Add(0, "proveedores", "ciudad", "..")
+        DGVADHOC.Rows.Add(0, "proveedores", "estado", "..")
+        DGVADHOC.Rows.Add(0, "detalleCompra", "idCompra", "..")
+        DGVADHOC.Rows.Add(0, "detalleCompra", "idProducto", "..")
+        DGVADHOC.Rows.Add(0, "detalleCompra", "cantidad", "..")
+        DGVADHOC.Rows.Add(0, "detalleCompra", "precio", "..")
+        DGVADHOC.Rows.Add(0, "productos", "nombreProducto", "..")
+        DGVADHOC.Rows.Add(0, "productos", "detalle", "..")
+        DGVADHOC.Rows.Add(0, "productos", "idCategoria", "..")
+        DGVADHOC.Rows.Add(0, "productos", "precio", "..")
+        DGVADHOC.Rows.Add(0, "productos", "cantidad", "..")
+        DGVADHOC.Rows.Add(0, "productos", "maximo", "..")
+        DGVADHOC.Rows.Add(0, "productos", "minimo", "..")
+        DGVADHOC.Rows.Add(0, "categoria", "nombre", "..")
+        DGVADHOC.Rows.Add(0, "categoria", "descripcion", "..")
+
+
     End Sub
 
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
-        Dim x, a As Integer
-        x = 0
-        a = 0
+        Dim primerCampo = False
+        Dim numcap = 0
+        Dim sql As String = "select "
+        Dim x = 0, a = 0
+        Dim columna As String
         Try
             For i As Integer = 0 To DGVADHOC.Rows.Count - 2
                 Dim y As Integer = DGVADHOC.Item(0, i).Value
-                ' MsgBox(y)
                 If y = -1 Then
+                    numcap = numcap + 1
+
                     Dim nomTabla As String = DGVADHOC.Item(1, i).Value
                     Dim nomCampo As String = DGVADHOC.Item(2, i).Value
-                    Dim columna As String
+
+                    If nomTabla = "compras" Then
+                        If primerCampo = False Then
+                            sql = sql + "com." + nomCampo
+                            primerCampo = True
+                        Else
+                            sql = sql + ",com." + nomCampo
+                        End If
+
+                    ElseIf nomTabla = "proveedores" Then
+                        If primerCampo = False Then
+                            sql = sql + "pro." + nomCampo
+                            primerCampo = True
+                        Else
+                            sql = sql + ",pro." + nomCampo
+                        End If
+
+                    ElseIf nomTabla = "detalleCompra" Then
+                        If primerCampo = False Then
+                            sql = sql + "detCompra." + nomCampo
+                            primerCampo = True
+                        Else
+                            sql = sql + ",detCompra." + nomCampo
+                        End If
+
+                    ElseIf nomTabla = "productos" Then
+                        If primerCampo = False Then
+                            sql = sql + "prod." + nomCampo
+                            primerCampo = True
+                        Else
+                            sql = sql + ",prod." + nomCampo
+                        End If
+
+                    ElseIf nomTabla = "categoria" Then
+                        If primerCampo = False Then
+                            sql = sql + "cat." + nomCampo
+                            primerCampo = True
+                        Else
+                            sql = sql + ",cat." + nomCampo
+                        End If
+                    End If
                     columna = "Column" & x
-
-
-                    R = "Select " & nomCampo & " from " & nomTabla & ""
-                    Comando.CommandText = R
-                    lector = Comando.ExecuteReader
                     DGVExcel.Columns.Add(columna, nomCampo)
-                    a = 0
-                    While lector.Read
-                        DGVExcel.Rows.Add()
-                        DGVExcel.Rows(a).Cells(x).Value = lector(0)
-                        a = a + 1
-                    End While
-                    lector.Close()
                     x = x + 1
                 End If
+
             Next
+
+
+
+
+            sql = sql + " from compras as com inner join proveedores as pro on pro.idProveedor = com.idProveedor inner join detalleCompra as detCompra on detCompra.idCompra = com.idCompras inner join productos as prod on detCompra.idProducto = prod.idProducto inner join categoria as cat on cat.idCategoria = prod.idCategoria"
+            Comando.CommandText = sql
+            lector = Comando.ExecuteReader
+            While lector.Read
+                DGVExcel.Rows.Add()
+                For i = 0 To numcap - 1
+                    DGVExcel.Rows(a).Cells(i).Value = lector(i)
+                Next
+                a = a + 1
+            End While
+            lector.Close()
+
         Catch m As Exception
             MsgBox(m)
         End Try
