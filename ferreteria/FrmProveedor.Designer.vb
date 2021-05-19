@@ -76,6 +76,7 @@ Partial Class FrmProveedor
         Me.SqlUpdateCommand1 = New System.Data.SqlClient.SqlCommand()
         Me.SqlDeleteCommand1 = New System.Data.SqlClient.SqlCommand()
         Me.SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.btnImportardesdeExcel = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.ProveedoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -615,12 +616,22 @@ Partial Class FrmProveedor
         Me.SqlDataAdapter1.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "proveedores", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("idProveedor", "idProveedor"), New System.Data.Common.DataColumnMapping("nombre", "nombre"), New System.Data.Common.DataColumnMapping("telefono", "telefono"), New System.Data.Common.DataColumnMapping("celular", "celular"), New System.Data.Common.DataColumnMapping("domicilio", "domicilio"), New System.Data.Common.DataColumnMapping("cp", "cp"), New System.Data.Common.DataColumnMapping("colonia", "colonia"), New System.Data.Common.DataColumnMapping("rfc", "rfc"), New System.Data.Common.DataColumnMapping("ciudad", "ciudad"), New System.Data.Common.DataColumnMapping("estado", "estado")})})
         Me.SqlDataAdapter1.UpdateCommand = Me.SqlUpdateCommand1
         '
+        'btnImportardesdeExcel
+        '
+        Me.btnImportardesdeExcel.Location = New System.Drawing.Point(580, 453)
+        Me.btnImportardesdeExcel.Name = "btnImportardesdeExcel"
+        Me.btnImportardesdeExcel.Size = New System.Drawing.Size(98, 52)
+        Me.btnImportardesdeExcel.TabIndex = 65
+        Me.btnImportardesdeExcel.Text = "Importar desde Excel"
+        Me.btnImportardesdeExcel.UseVisualStyleBackColor = True
+        '
         'FrmProveedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.ferreteria.My.Resources.Resources.fed11c516d402c77c569d4856e521056
         Me.ClientSize = New System.Drawing.Size(690, 544)
+        Me.Controls.Add(Me.btnImportardesdeExcel)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
@@ -696,4 +707,5 @@ Partial Class FrmProveedor
     Friend WithEvents RfcDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CiudadDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EstadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents btnImportardesdeExcel As Button
 End Class

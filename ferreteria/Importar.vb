@@ -5,6 +5,8 @@ Imports System.Data.OleDb
 Imports System
 Imports Microsoft.VisualBasic
 Imports System.Data.SqlClient
+Imports System.ComponentModel
+
 Public Class Importar
     Dim tablename As String
     Sub importarExcel(ByVal tabla As DataGridView)
@@ -12,7 +14,7 @@ Public Class Importar
         Dim xSheet As String = ""
 
         With myFileDialog
-            .Filter = "Excel Files |*.xlsx"
+            .Filter = "Excel Files |*.xls"
             .Title = "Open File"
             .ShowDialog()
         End With
@@ -53,38 +55,31 @@ Public Class Importar
         conexion.Open()
         Try
             comando = conexion.CreateCommand
-            'Dim screatetable As String = "CREATE TABLE " & tablename & "("
-            'Dim natributos As Integer = DataGridView1.Columns.Count
-            'Dim datatypeA As New ArrayList
-            'For x = 0 To natributos - 1
-            '    If IsNumeric(DataGridView1.Rows(0).Cells(x).Value) Then
-            '        datatypeA.Add("int")
-            '    Else
-            '        datatypeA.Add("varchar(MAX)")
-            '    End If
-            '    If x = natributos - 1 Then
-            '        screatetable += DataGridView1.Columns.Item(x).HeaderText & " " & datatypeA(x) & " NOT NULL);"
-
-            '    Else
-            '        screatetable += DataGridView1.Columns.Item(x).HeaderText & " " & datatypeA(x) & " NOT NULL, "
-            '    End If
-            'Next
-            'comando.CommandText = screatetable
+            Dim sentencesql As String = ""
             For x = 0 To DataGridView1.Rows.Count - 2
-                Dim sentencesql As String = "INSERT INTO productos VALUES (" &
-                DataGridView1(0, x).Value & ",'" & DataGridView1(1, x).Value & "','" &
-                DataGridView1(2, x).Value & "'," & DataGridView1(3, x).Value & "," &
-                DataGridView1(4, x).Value & "," & DataGridView1(5, x).Value & "," &
-                DataGridView1(6, x).Value & "," & DataGridView1(7, x).Value & ")"
-                'For y = 0 To DataGridView1.Columns.Count - 1
-                '    If datatypeA(y).Equals("int") Then
-                '        sentencesql += CInt(DataGridView1(y, x).Value) & ","
-                '    Else
-                '        sentencesql += "'" & DataGridView1(y, x).Value & "',"
-                '    End If
-                'Next
-                'sentencesql = sentencesql.Substring(0, sentencesql.Length - 1)
-                'sentencesql += ")"
+                If catTarget.Equals("Producto") Then
+                    sentencesql = "INSERT INTO productos VALUES (" &
+                    DataGridView1(0, x).Value & ",'" & DataGridView1(1, x).Value & "','" &
+                    DataGridView1(2, x).Value & "'," & DataGridView1(3, x).Value & "," &
+                    DataGridView1(4, x).Value & "," & DataGridView1(5, x).Value & "," &
+                    DataGridView1(6, x).Value & "," & DataGridView1(7, x).Value & ")"
+                ElseIf catTarget.Equals("Personal") Then
+                    sentencesql = "INSERT INTO personal(idPersonal, nombre, telefono, celular, domicilio, cp, colonia) VALUES 
+                    (" & DataGridView1(0, x).Value & ",'" & DataGridView1(1, x).Value & "'," &
+                    DataGridView1(2, x).Value & "," & DataGridView1(3, x).Value & ",'" &
+                    DataGridView1(4, x).Value & "'," & DataGridView1(5, x).Value & ",'" &
+                    DataGridView1(6, x).Value & "')"
+                ElseIf catTarget.Equals("Proveedor") Then
+                    sentencesql = "INSERT INTO proveedores(idProveedor, nombre, telefono, celular, domicilio, cp, colonia, rfc) VALUES (" &
+                    "" & DataGridView1(0, x).Value & ",'" & DataGridView1(1, x).Value & "'," &
+                    DataGridView1(2, x).Value & "," & DataGridView1(3, x).Value & ",'" &
+                    DataGridView1(4, x).Value & "'," & DataGridView1(5, x).Value & ",'" &
+                    DataGridView1(6, x).Value & "','" & DataGridView1(7, x).Value & "'" & ")"
+                ElseIf catTarget.Equals("Categoria") Then
+                    sentencesql = "INSERT INTO categoria VALUES (" &
+                    DataGridView1(0, x).Value & ",'" & DataGridView1(1, x).Value & "','" &
+                    DataGridView1(2, x).Value & "')"
+                End If
                 comando.CommandText = sentencesql
                 comando.ExecuteNonQuery()
             Next
@@ -103,5 +98,11 @@ Public Class Importar
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         enviaASQL()
+    End Sub
+
+    Private Sub Importar_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        Button2.Enabled = False
+        DataGridView1.DataSource = Nothing
+        DataGridView1.Rows.Clear()
     End Sub
 End Class
