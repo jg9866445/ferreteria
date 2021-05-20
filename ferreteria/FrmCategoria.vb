@@ -96,4 +96,9 @@ Public Class FrmCategoria
             System.Diagnostics.Process.Start(rutaAyuda + "Ayuda.chm")
         End If
     End Sub
+    Private Sub btnImportardesdeExcel_Click(sender As Object, e As EventArgs) Handles btnImportardesdeExcel.Click
+        DataSet11.Clear()
+        Importar.ShowDialog()
+        SqlDataAdapter1.Fill(DataSet11.categoria)
+    End Sub
 End Class

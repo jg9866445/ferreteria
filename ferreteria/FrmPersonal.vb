@@ -145,5 +145,9 @@ Public Class FrmPersonal
         End If
     End Sub
 
-
+    Private Sub btnImportardesdeExcel_Click(sender As Object, e As EventArgs) Handles btnImportardesdeExcel.Click
+        DataSet1.Clear()
+        Importar.ShowDialog()
+        SqlDataAdapter1.Fill(DataSet1.personal)
+    End Sub
 End Class

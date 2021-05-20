@@ -78,6 +78,7 @@ Partial Class FrmPersonal
         Me.SqlDeleteCommand1 = New System.Data.SqlClient.SqlCommand()
         Me.SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter()
         Me.DataSet11 = New ferreteria.DataSet1()
+        Me.btnImportardesdeExcel = New System.Windows.Forms.Button()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -637,12 +638,22 @@ Partial Class FrmPersonal
         Me.DataSet11.DataSetName = "DataSet1"
         Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'btnImportardesdeExcel
+        '
+        Me.btnImportardesdeExcel.Location = New System.Drawing.Point(571, 475)
+        Me.btnImportardesdeExcel.Name = "btnImportardesdeExcel"
+        Me.btnImportardesdeExcel.Size = New System.Drawing.Size(98, 52)
+        Me.btnImportardesdeExcel.TabIndex = 65
+        Me.btnImportardesdeExcel.Text = "Importar desde Excel"
+        Me.btnImportardesdeExcel.UseVisualStyleBackColor = True
+        '
         'FrmPersonal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.ferreteria.My.Resources.Resources.fed11c516d402c77c569d4856e521056
         Me.ClientSize = New System.Drawing.Size(694, 554)
+        Me.Controls.Add(Me.btnImportardesdeExcel)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
@@ -721,4 +732,5 @@ Partial Class FrmPersonal
     Friend WithEvents txtTelefono As TextBox
     Friend WithEvents txtCelular As TextBox
     Friend WithEvents txtCiudad As ComboBox
+    Friend WithEvents btnImportardesdeExcel As Button
 End Class
